@@ -341,7 +341,13 @@ Error message and password prompt
 
 <li>$:/temp/advancedsearch</li>
 
+<li>$:/temp/ClientDBeditClient</li>
+
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/NewTagName</li>
+
+<li>$:/temp/PersonDBeditPerson</li>
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/languages/ca-ES</li>
 
@@ -888,8 +894,6 @@ Error message and password prompt
 <li>Sydney Water</li>
 
 <li>Templates</li>
-
-<li>test</li>
 
 <li>tid/B1R6Qy5nB</li>
 
@@ -12592,11 +12596,14 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191201071206371" creator="Ian" list="LandingPage Planit" modified="20191201071723741" modifier="Ian" title="$:/StoryList">
+<div created="20191201071206371" creator="Ian" list="ClientTemplate ARCLB Planit" modified="20191201073738328" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191126040256623" creator="Ian" modified="20191126040256623" modifier="Ian" title="$:/temp/advancedsearch">
 <pre>&lt;$list filter=&quot;[!has[draft.of]]&quot;&gt;</pre>
+</div>
+<div created="20191201072948330" creator="Ian" modified="20191201072952158" modifier="Ian" title="$:/temp/ClientDBeditClient">
+<pre>test name one</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -12655,6 +12662,12 @@ wjam</pre>
         }
     }
 }</pre>
+</div>
+<div created="20191201074229888" creator="Ian" modified="20191201074229888" modifier="Ian" title="$:/temp/NewTagName">
+<pre></pre>
+</div>
+<div created="20191201072753641" creator="Ian" modified="20191201072757809" modifier="Ian" title="$:/temp/PersonDBeditPerson">
+<pre>test</pre>
 </div>
 <div author="Paco Rivière" core-version="&gt;=5.0.0" created="20191128211807357" creator="Ian" dependents="" description="Catalan (Spain)" icon="data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22810%22%20height%3D%22540%22%3E%0A%3Crect%20width%3D%22810%22%20height%3D%22540%22%20fill%3D%22%23FCDD09%22%2F%3E%0A%3Cpath%20stroke%3D%22%23DA121A%22%20stroke-width%3D%2260%22%20d%3D%22M0%2C90H810m0%2C120H0m0%2C120H810m0%2C120H0%22%2F%3E%0A%3C%2Fsvg%3E" modified="20191128211807357" modifier="Ian" name="ca-ES" original-plugin-type="language" original-tags="" original-title="$:/languages/ca-ES" original-type="application/json" server-url="https://tiddlywiki.com/library/v5.1.21/index.html" tags="$:/tags/RemoteAssetInfo" title="$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/languages/ca-ES" type="text/vnd.tiddlywiki" version="5.1.21">
 <pre></pre>
@@ -13673,7 +13686,7 @@ Demonstrate the API library and document its use within the AMP testing environm
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
 </div>
-<div created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201063751742" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
+<div created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201073855233" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
 <pre>|Start |End |
 |&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
 [[Work board|ARCLB Board]]
@@ -13682,7 +13695,7 @@ Demonstrate the API library and document its use within the AMP testing environm
 
 &lt;&lt;list-links &quot;[tag[ClientInfo]tag[ARCLB]sort[title]]&quot;&gt;&gt;
 
-&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;
+
 </pre>
 </div>
 <div created="20191125214555162" creator="Ian" dpbd-displayimages="yes" dpbd-displaytext="yes" dpbd-listwidth-em="" dpbd-listwidth-num="4" dpbd-widthismax="yes" list="[[ARCLB Board/Backlog]] [[ARCLB Board/Blocked]] [[ARCLB Board/In Progress]] [[ARCLB Board/Done]]" modified="20191129040921861" modifier="Ian" tags="Boards" title="ARCLB Board">
@@ -13983,17 +13996,20 @@ Ensure that defects were actioned correctly and in a timely manner.</pre>
 
 </pre>
 </div>
-<div created="20191201063415579" creator="Ian" modified="20191201071529281" modifier="Ian" tags="Client" title="ClientTemplate">
+<div created="20191201063415579" creator="Ian" modified="20191201074229888" modifier="Ian" tags="template $:/tags/ViewTemplate" title="ClientTemplate" type="text/vnd.tiddlywiki">
 <pre>|Start |End |
 |&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
+&lt;br&gt;
+
+
 [[Work board|{{!!title}} Board]]
 
 ''Useful information''
 
 
-''Role'': 
+''Role'':  {{!!Role}}
 
-''Summar'': 
+''Summary'': 
 
 ''Responsibilities'':</pre>
 </div>
@@ -14594,7 +14610,7 @@ http://www.software-lab.de/penti.html</pre>
 <pre>*  [ext[PKL main site|https://github.com/Portable-Keyboard-Layout/Portable-Keyboard-Layout/]]
 * [ext[Carplax alternate layouts|http://mkweb.bcgsc.ca/carpalx/?]]</pre>
 </div>
-<div created="20191120214054050" creator="Ian " modified="20191201071656928" modifier="Ian" tags="Work" title="Planit" tmap.id="15ae06e4-922e-4439-ae4e-599416d5acd3">
+<div ClientName="" created="20191120214054050" creator="Ian " modified="20191201072932492" modifier="Ian" tags="Work" title="Planit" tmap.id="15ae06e4-922e-4439-ae4e-599416d5acd3">
 <pre>[[Work board|Planit Board]]
 
 ''GENERAL''
@@ -14608,15 +14624,8 @@ http://www.software-lab.de/penti.html</pre>
 
 &lt;&lt;list-links &quot;[tag[Planit]tag[Link]sort[title]]&quot;&gt;&gt;
 
-&lt;$set name=&quot;f1&quot; value=&lt;&lt;qualify &quot;unique&quot;&gt;&gt; &gt;
-&lt;$set name=&quot;f2&quot; value=&quot;field-2&quot;&gt;
-&lt;$set name=&quot;placeholder&quot; value=&quot;pl1&quot;&gt;
-&lt;$set name=&quot;tag1&quot; value=&quot;testtag&quot;&gt;
-&lt;$newtiddler title=&quot;New Client&quot; skeleton=&quot;ClientTemplate&quot;&gt;New Client&lt;/$newtiddler&gt;
-&lt;/$set&gt;
-&lt;/$set&gt;
-&lt;/$set&gt;
-&lt;/$set&gt;</pre>
+
+&lt;$edit-text tiddler=&quot;$:/temp/ClientDBeditClient&quot; tag=&quot;input&quot; type=&quot;text&quot;/&gt; &lt;$set name=&quot;tags&quot; value=&quot;client&quot;&gt;&lt;$newtiddler title={{$:/temp/ClientDBeditClient}} skeleton=&quot;ClientSkeleton&quot; edit=&quot;no&quot; class=&quot;btn-invisible&quot;&gt;{{$:/core/images/new-button}}&lt;/$newtiddler&gt;&lt;/$set&gt;</pre>
 </div>
 <div caption="Backlog" created="20191113005806605" creator="Ian " list="tid/ryEcgz92S" modified="20191126024011550" modifier="Ian " tags="[[Planit Board]]" title="Planit Backlog" tmap.id="12cdd7c9-7395-4529-9ae9-62a1e8fd502f">
 <pre></pre>
@@ -14946,9 +14955,6 @@ https://github.com/FavioVazquez/ds-cheatsheets/blob/master/SQL/zt_sql_cheat_shee
 </div>
 <div created="20191126213814441" creator="Ian" modified="20191126214103383" modifier="Ian" tags="Locksport" title="Templates">
 <pre>&lt;&lt;list-links &quot;[tag[Locksport]tag[Link]tag[Templates]sort[title]]&quot;&gt;&gt;</pre>
-</div>
-<div created="20191201071252299" creator="Ian" modified="20191201071252299" modifier="Ian" title="test">
-<pre></pre>
 </div>
 <div caption="{{!!shorttext}}" created="20191125232910394" modified="20191126000852486" shorttext="Component/Release Labeling" tags="[[ARCLB Board/Backlog]]" title="tid/B1R6Qy5nB">
 <pre>Patient Surname to be added in existing data seeding script </pre>
