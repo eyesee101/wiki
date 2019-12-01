@@ -271,6 +271,8 @@ Error message and password prompt
 
 <li>$:/plugins/reidgould/shortid</li>
 
+<li>$:/plugins/skeeve/newtiddler.js</li>
+
 <li>$:/plugins/telmiger/listreveal</li>
 
 <li>$:/plugins/tgrosinger/tw5-checklist</li>
@@ -326,6 +328,8 @@ Error message and password prompt
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
+
+<li>$:/state/tab/moresidebar-1850697562</li>
 
 <li>$:/state/tab/sidebar--595412856</li>
 
@@ -633,6 +637,8 @@ Error message and password prompt
 
 <li>Clients</li>
 
+<li>ClientTemplate</li>
+
 <li>Coding</li>
 
 <li>Coles</li>
@@ -736,6 +742,8 @@ Error message and password prompt
 <li>MLC Life</li>
 
 <li>MSDynamics</li>
+
+<li>MyTemplate</li>
 
 <li>NAB</li>
 
@@ -10454,7 +10462,7 @@ color:$(foregroundColor)$;
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/kixam/datepicker]]</pre>
+# [[$:/plugins/skeeve/newtiddler.js]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
@@ -10761,6 +10769,144 @@ color:$(foregroundColor)$;
         }
     }
 }</pre>
+</div>
+<div module-type="widget" title="$:/plugins/skeeve/newtiddler.js" type="application/javascript">
+<pre>/*\
+title: $:/plugins/skeeve/newtiddler.js
+type: application/javascript
+module-type: widget
+
+newtiddler widget
+
+```
+&lt;$newtiddler title=&quot;name&quot; skeleton=&quot;name&quot;&gt;Buttontext&lt;/$newtiddler&gt;
+```
+
+The skeleton tiddler may contain variables which are replaced during creation
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+&quot;use strict&quot;;
+
+var Widget = require(&quot;$:/core/modules/widgets/widget.js&quot;).widget;
+
+var NewtiddlerWidget = function(parseTreeNode,options) {
+	this.initialise(parseTreeNode,options);
+};
+
+/*
+Inherit from the base widget class
+*/
+NewtiddlerWidget.prototype = new Widget();
+
+/*
+Render this widget into the DOM
+*/
+NewtiddlerWidget.prototype.render = function(parent,nextSibling) {
+	var self = this;
+	// Remember parent
+	this.parentDomNode = parent;
+	// Compute attributes and execute state
+	this.computeAttributes();
+	this.execute();
+	// Create element
+	var domNode = this.document.createElement(&quot;button&quot;);
+	// Assign classes
+	domNode.className = this.newtiddlerClass;
+	// Assign styles
+	if(this.style) {
+		domNode.setAttribute(&quot;style&quot;,this.style);
+	}
+	// Add a click event handler
+	$tw.utils.addEventListeners(domNode,[
+		{name: &quot;click&quot;, handlerObject: this, handlerMethod: &quot;handleClickEvent&quot;}
+	]);
+	// Insert element
+	parent.insertBefore(domNode,nextSibling);
+	this.renderChildren(domNode,null);
+	this.domNodes.push(domNode);
+};
+
+NewtiddlerWidget.prototype.handleClickEvent = function(event) {
+	var skeleton = this.wiki.getTiddlerAsJson(this.newtiddlerSkeleton);
+	var skeletonClone = JSON.parse(this.substituteVariableReferences(skeleton));
+	var basetitle = this.newtiddlerTitle;
+	var title = basetitle;
+	for(var t=1; this.wiki.tiddlerExists(title); t++) {
+		title = basetitle + &quot; &quot; + t;
+	}
+	skeletonClone.title = title;
+	var created = this.wiki.getCreationFields();
+	for(var creationField in created) {
+		skeletonClone[creationField] = created[creationField];
+	}
+	var modified = this.wiki.getModificationFields();
+	for(var modificationField in modified) {
+		skeletonClone[modificationField] = modified[modificationField];
+	}
+	this.wiki.addTiddler(skeletonClone);
+	switch(this.newtiddlerEdit) {
+	case &quot;show&quot;:
+	case &quot;yes&quot;:
+		var bounds = this.domNodes[0].getBoundingClientRect();
+		this.dispatchEvent({
+			type: &quot;tw-navigate&quot;,
+			navigateTo: title,
+			navigateFromTitle: this.getVariable(&quot;currentTiddler&quot;),
+			navigateFromNode: this,
+			navigateFromClientRect: { top: bounds.top, left: bounds.left, width: bounds.width, right: bounds.right, bottom: bounds.bottom, height: bounds.height
+			}
+		});
+		if(this.newtiddlerEdit === &quot;yes&quot;) {
+			this.dispatchEvent({type: &quot;tw-edit-tiddler&quot;, tiddlerTitle: title});
+		}
+		break;
+	case &quot;no&quot;:
+		break;
+	case &quot;inline&quot;:
+		// not implemented yet
+		break;
+	}
+};
+
+
+/*
+Compute the internal state of the widget
+*/
+NewtiddlerWidget.prototype.execute = function() {
+	// Get attributes
+	this.newtiddlerTitle = this.getAttribute(&quot;title&quot;);
+	this.newtiddlerSkeleton = this.getAttribute(&quot;skeleton&quot;);
+	this.newtiddlerEdit = this.getAttribute(&quot;edit&quot;, &quot;yes&quot;);
+	this.newtiddlerClass = this.getAttribute(&quot;class&quot;,&quot;&quot;);
+	this.newtiddlerStyle = this.getAttribute(&quot;style&quot;);
+	if(this.newtiddlerClass != &quot;&quot;) {
+		this.newtiddlerClass = &quot; &quot; + this.newtiddlerClass;
+	}
+	this.newtiddlerClass = &quot;tw-newtiddler-button&quot; + this.newtiddlerClass;
+	// Make child widgets
+	this.makeChildWidgets();
+};
+
+/*
+Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
+*/
+NewtiddlerWidget.prototype.refresh = function(changedTiddlers) {
+	var changedAttributes = this.computeAttributes();
+	if(changedAttributes.title || changedAttributes.skeleton || changedAttributes.class || changedAttributes.style) {
+		this.refreshSelf();
+		return true;
+	}
+	return this.refreshChildren(changedTiddlers);
+};
+
+exports.newtiddler = NewtiddlerWidget;
+
+})();
+</pre>
 </div>
 <div author="Thomas Elmiger" core-version="5.1.14" created="20160918233630962" creator="Thomas Elmiger" description="Listreveal – open listed tiddlers" list="readme configuration support" modified="20190310223344129" modifier="Thomas Elmiger" name="Listreveal" plugin-type="plugin" source="https://tid.li/tw5/plugins.html" title="$:/plugins/telmiger/listreveal" type="application/json" version="0.3.30">
 <pre>{
@@ -12432,7 +12578,10 @@ wjam</pre>
 <div created="20191126082916688" creator="Ian" modified="20191130032052193" modifier="Ian" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20191126045821694" creator="Ian" modified="20191129045156386" modifier="Ian" title="$:/state/tab/sidebar--595412856">
+<div created="20191201064313728" creator="Ian" modified="20191201064320392" modifier="Ian" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Shadows</pre>
+</div>
+<div created="20191126045821694" creator="Ian" modified="20191201064311799" modifier="Ian" title="$:/state/tab/sidebar--595412856">
 <pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20191126233757292" creator="Ian" modified="20191129034336440" modifier="Ian" title="$:/state/tabs/controlpanel/toolbars-1345989671">
@@ -12441,7 +12590,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191201023454204" creator="Ian" list="" modified="20191201023924459" modifier="Ian" title="$:/StoryList">
+<div created="20191201023454204" creator="Ian" list="$:/Import" modified="20191201070159088" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191126040256623" creator="Ian" modified="20191126040256623" modifier="Ian" title="$:/temp/advancedsearch">
@@ -13264,8 +13413,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20191129034906332" creator="Ian" modified="20191129034913154" modifier="Ian" replace="ClientInfo" title="$:/temp/replace-tag">
 <pre></pre>
 </div>
-<div created="20191126045351689" creator="Ian" modified="20191129030436489" modifier="Ian" title="$:/temp/search">
-<pre>portable</pre>
+<div created="20191126045351689" creator="Ian" modified="20191201070157093" modifier="Ian" title="$:/temp/search">
+<pre>MyT</pre>
 </div>
 <div created="20191128211807197" creator="Ian" modified="20191128211807197" modifier="Ian" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -13522,7 +13671,7 @@ Demonstrate the API library and document its use within the AMP testing environm
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
 </div>
-<div created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201025512137" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
+<div created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201063751742" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
 <pre>|Start |End |
 |&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
 [[Work board|ARCLB Board]]
@@ -13532,8 +13681,7 @@ Demonstrate the API library and document its use within the AMP testing environm
 &lt;&lt;list-links &quot;[tag[ClientInfo]tag[ARCLB]sort[title]]&quot;&gt;&gt;
 
 &lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;
-
-!!Result:</pre>
+</pre>
 </div>
 <div created="20191125214555162" creator="Ian" dpbd-displayimages="yes" dpbd-displaytext="yes" dpbd-listwidth-em="" dpbd-listwidth-num="4" dpbd-widthismax="yes" list="[[ARCLB Board/Backlog]] [[ARCLB Board/Blocked]] [[ARCLB Board/In Progress]] [[ARCLB Board/Done]]" modified="20191129040921861" modifier="Ian" tags="Boards" title="ARCLB Board">
 <pre>&lt;$transclude tiddler=&quot;$:/plugins/reidgould/dpbd/templates/view/Board&quot; mode=&quot;inline&quot; /&gt;</pre>
@@ -13832,6 +13980,34 @@ Ensure that defects were actioned correctly and in a timely manner.</pre>
 * [[Details Need Work|NeedWork]]
 
 </pre>
+</div>
+<div created="20191201063415579" creator="Ian" modified="20191201070215965" modifier="Ian" tags="Client" title="ClientTemplate">
+<pre>|Start |End |
+|&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
+[[Work board|{{!!title}} Board]]
+
+''Useful information''
+
+
+''Role'': 
+
+''Summar'': 
+
+''Responsibilities'':
+
+
+
+&lt;$edit-text tiddler=&quot;MyTemplate&quot; field=&quot;city_name&quot; default=&quot;&quot; placeholder='City name'/&gt;
+&lt;$action-setfield $tiddler=&quot;MyTemplate&quot; $field=&quot;city_name&quot; $value=&quot;&quot;/&gt;
+
+&lt;$button&gt;Make Tiddler
+&lt;$action-navigate $to={{MyTitle}}/&gt;
+&lt;$action-setfield $tiddler='MyTemplate' $field='title' $value={{MyTitle}}/&gt;
+&lt;$action-sendmessage $message=&quot;tm-edit-tiddler&quot; $param={{MyTitle}}/&gt;
+&lt;$action-setfield $tiddler=&quot;MyTemplate&quot; $field=&quot;city_name&quot; $value=&quot;&quot;/&gt;
+&lt;$action-deletefield $tiddler=MyTitle text/&gt;
+&lt;/$button&gt;
+&lt;br&gt;</pre>
 </div>
 <div created="20191130031755025" creator="Ian" modified="20191130031937755" modifier="Ian" tags="Coding" title="Coding">
 <pre>*[ext[ Power of 10 Rules|https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code]]</pre>
@@ -14253,6 +14429,9 @@ Use password `evva3ks`</pre>
     &lt;/$list&gt;
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
+</div>
+<div city_name="" created="20191201070030390" creator="Ian" modified="20191201070228813" modifier="Ian" title="MyTemplate">
+<pre>Test Template</pre>
 </div>
 <div created="20191106024127178" creator="Ian " modified="20191113230349619" modifier="Ian " tags="Attention VBScript Vic Excel ALM Client" title="NAB" tmap.id="5c9d0328-c1ae-4b6e-b8aa-5859040fd20c">
 <pre>|Start |End |
