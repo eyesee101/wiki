@@ -889,6 +889,8 @@ Error message and password prompt
 
 <li>Templates</li>
 
+<li>test</li>
+
 <li>tid/B1R6Qy5nB</li>
 
 <li>tid/By6u7J5hB</li>
@@ -12581,8 +12583,8 @@ wjam</pre>
 <div created="20191201064313728" creator="Ian" modified="20191201064320392" modifier="Ian" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20191126045821694" creator="Ian" modified="20191201064311799" modifier="Ian" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/More</pre>
+<div created="20191126045821694" creator="Ian" modified="20191201071450463" modifier="Ian" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20191126233757292" creator="Ian" modified="20191129034336440" modifier="Ian" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/TopToolbar</pre>
@@ -12590,7 +12592,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191201023454204" creator="Ian" list="$:/Import" modified="20191201070159088" modifier="Ian" title="$:/StoryList">
+<div created="20191201071206371" creator="Ian" list="LandingPage Planit" modified="20191201071723741" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191126040256623" creator="Ian" modified="20191126040256623" modifier="Ian" title="$:/temp/advancedsearch">
@@ -13413,8 +13415,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20191129034906332" creator="Ian" modified="20191129034913154" modifier="Ian" replace="ClientInfo" title="$:/temp/replace-tag">
 <pre></pre>
 </div>
-<div created="20191126045351689" creator="Ian" modified="20191201070157093" modifier="Ian" title="$:/temp/search">
-<pre>MyT</pre>
+<div created="20191126045351689" creator="Ian" modified="20191201071447680" modifier="Ian" title="$:/temp/search">
+<pre></pre>
 </div>
 <div created="20191128211807197" creator="Ian" modified="20191128211807197" modifier="Ian" tags="$:/tags/ServerConnection" title="$:/temp/ServerConnection/https://tiddlywiki.com/library/v5.1.21/index.html" url="https://tiddlywiki.com/library/v5.1.21/index.html">
 <pre>loaded</pre>
@@ -13981,7 +13983,7 @@ Ensure that defects were actioned correctly and in a timely manner.</pre>
 
 </pre>
 </div>
-<div created="20191201063415579" creator="Ian" modified="20191201070215965" modifier="Ian" tags="Client" title="ClientTemplate">
+<div created="20191201063415579" creator="Ian" modified="20191201071529281" modifier="Ian" tags="Client" title="ClientTemplate">
 <pre>|Start |End |
 |&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
 [[Work board|{{!!title}} Board]]
@@ -13993,21 +13995,7 @@ Ensure that defects were actioned correctly and in a timely manner.</pre>
 
 ''Summar'': 
 
-''Responsibilities'':
-
-
-
-&lt;$edit-text tiddler=&quot;MyTemplate&quot; field=&quot;city_name&quot; default=&quot;&quot; placeholder='City name'/&gt;
-&lt;$action-setfield $tiddler=&quot;MyTemplate&quot; $field=&quot;city_name&quot; $value=&quot;&quot;/&gt;
-
-&lt;$button&gt;Make Tiddler
-&lt;$action-navigate $to={{MyTitle}}/&gt;
-&lt;$action-setfield $tiddler='MyTemplate' $field='title' $value={{MyTitle}}/&gt;
-&lt;$action-sendmessage $message=&quot;tm-edit-tiddler&quot; $param={{MyTitle}}/&gt;
-&lt;$action-setfield $tiddler=&quot;MyTemplate&quot; $field=&quot;city_name&quot; $value=&quot;&quot;/&gt;
-&lt;$action-deletefield $tiddler=MyTitle text/&gt;
-&lt;/$button&gt;
-&lt;br&gt;</pre>
+''Responsibilities'':</pre>
 </div>
 <div created="20191130031755025" creator="Ian" modified="20191130031937755" modifier="Ian" tags="Coding" title="Coding">
 <pre>*[ext[ Power of 10 Rules|https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code]]</pre>
@@ -14606,7 +14594,7 @@ http://www.software-lab.de/penti.html</pre>
 <pre>*  [ext[PKL main site|https://github.com/Portable-Keyboard-Layout/Portable-Keyboard-Layout/]]
 * [ext[Carplax alternate layouts|http://mkweb.bcgsc.ca/carpalx/?]]</pre>
 </div>
-<div created="20191120214054050" creator="Ian " modified="20191130031654649" modifier="Ian" tags="Work" title="Planit" tmap.id="15ae06e4-922e-4439-ae4e-599416d5acd3">
+<div created="20191120214054050" creator="Ian " modified="20191201071656928" modifier="Ian" tags="Work" title="Planit" tmap.id="15ae06e4-922e-4439-ae4e-599416d5acd3">
 <pre>[[Work board|Planit Board]]
 
 ''GENERAL''
@@ -14618,7 +14606,17 @@ http://www.software-lab.de/penti.html</pre>
 
 ''Planit Links''
 
-&lt;&lt;list-links &quot;[tag[Planit]tag[Link]sort[title]]&quot;&gt;&gt;</pre>
+&lt;&lt;list-links &quot;[tag[Planit]tag[Link]sort[title]]&quot;&gt;&gt;
+
+&lt;$set name=&quot;f1&quot; value=&lt;&lt;qualify &quot;unique&quot;&gt;&gt; &gt;
+&lt;$set name=&quot;f2&quot; value=&quot;field-2&quot;&gt;
+&lt;$set name=&quot;placeholder&quot; value=&quot;pl1&quot;&gt;
+&lt;$set name=&quot;tag1&quot; value=&quot;testtag&quot;&gt;
+&lt;$newtiddler title=&quot;New Client&quot; skeleton=&quot;ClientTemplate&quot;&gt;New Client&lt;/$newtiddler&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;
+&lt;/$set&gt;</pre>
 </div>
 <div caption="Backlog" created="20191113005806605" creator="Ian " list="tid/ryEcgz92S" modified="20191126024011550" modifier="Ian " tags="[[Planit Board]]" title="Planit Backlog" tmap.id="12cdd7c9-7395-4529-9ae9-62a1e8fd502f">
 <pre></pre>
@@ -14948,6 +14946,9 @@ https://github.com/FavioVazquez/ds-cheatsheets/blob/master/SQL/zt_sql_cheat_shee
 </div>
 <div created="20191126213814441" creator="Ian" modified="20191126214103383" modifier="Ian" tags="Locksport" title="Templates">
 <pre>&lt;&lt;list-links &quot;[tag[Locksport]tag[Link]tag[Templates]sort[title]]&quot;&gt;&gt;</pre>
+</div>
+<div created="20191201071252299" creator="Ian" modified="20191201071252299" modifier="Ian" title="test">
+<pre></pre>
 </div>
 <div caption="{{!!shorttext}}" created="20191125232910394" modified="20191126000852486" shorttext="Component/Release Labeling" tags="[[ARCLB Board/Backlog]]" title="tid/B1R6Qy5nB">
 <pre>Patient Surname to be added in existing data seeding script </pre>
