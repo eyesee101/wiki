@@ -345,8 +345,6 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
-<li>$:/temp/NewTagName</li>
-
 <li>$:/temp/PersonDBeditPerson</li>
 
 <li>$:/temp/RemoteAssetInfo/https://tiddlywiki.com/library/v5.1.21/index.html/$:/languages/ca-ES</li>
@@ -12596,7 +12594,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191201071206371" creator="Ian" list="ClientTemplate ARCLB Planit" modified="20191201073738328" modifier="Ian" title="$:/StoryList">
+<div created="20191201071206371" creator="Ian" list="ClientTemplate ARCLB Planit" modified="20191201074330543" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191126040256623" creator="Ian" modified="20191126040256623" modifier="Ian" title="$:/temp/advancedsearch">
@@ -12662,9 +12660,6 @@ wjam</pre>
         }
     }
 }</pre>
-</div>
-<div created="20191201074229888" creator="Ian" modified="20191201074229888" modifier="Ian" title="$:/temp/NewTagName">
-<pre></pre>
 </div>
 <div created="20191201072753641" creator="Ian" modified="20191201072757809" modifier="Ian" title="$:/temp/PersonDBeditPerson">
 <pre>test</pre>
@@ -13686,15 +13681,8 @@ Demonstrate the API library and document its use within the AMP testing environm
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
 </div>
-<div created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201073855233" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
-<pre>|Start |End |
-|&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
-[[Work board|ARCLB Board]]
-
-''Useful information''
-
-&lt;&lt;list-links &quot;[tag[ClientInfo]tag[ARCLB]sort[title]]&quot;&gt;&gt;
-
+<div clienttag="ARCLB" created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191201074706241" modifier="Ian" startdate="20191107000000000" tags="Current Vic Selenium Client UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
+<pre>
 
 </pre>
 </div>
@@ -13996,22 +13984,12 @@ Ensure that defects were actioned correctly and in a timely manner.</pre>
 
 </pre>
 </div>
-<div created="20191201063415579" creator="Ian" modified="20191201074229888" modifier="Ian" tags="template $:/tags/ViewTemplate" title="ClientTemplate" type="text/vnd.tiddlywiki">
-<pre>|Start |End |
-|&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template={{!!dateformat}}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt;|
-&lt;br&gt;
-
-
-[[Work board|{{!!title}} Board]]
-
-''Useful information''
-
-
-''Role'':  {{!!Role}}
-
-''Summary'': 
-
-''Responsibilities'':</pre>
+<div created="20191201063415579" creator="Ian" modified="20191201074754547" modifier="Ian" tags="Client template $:/tags/ViewTemplate" title="ClientTemplate" type="text/vnd.tiddlywiki">
+<pre>&lt;$list filter=&quot;[is[current]tag[person]]&quot;&gt;
+|!Street |{{!!StartDate}} |
+|!Town |{{!!Enddate}} |
+|!Phone |{{!!phone}} |
+&lt;/$list&gt;</pre>
 </div>
 <div created="20191130031755025" creator="Ian" modified="20191130031937755" modifier="Ian" tags="Coding" title="Coding">
 <pre>*[ext[ Power of 10 Rules|https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code]]</pre>
