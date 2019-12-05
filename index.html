@@ -305,6 +305,8 @@ Error message and password prompt
 
 <li>$:/SiteTitle</li>
 
+<li>$:/state/showeditpreview</li>
+
 <li>$:/state/tab-1749438307</li>
 
 <li>$:/state/tab-2065006209</li>
@@ -316,6 +318,8 @@ Error message and password prompt
 <li>$:/StoryList</li>
 
 <li>$:/temp/info-plugin</li>
+
+<li>$:/temp/PAppDBeditPApp</li>
 
 <li>$:/temp/search</li>
 
@@ -595,6 +599,8 @@ Error message and password prompt
 
 <li>New Zealand</li>
 
+<li>Notepad++</li>
+
 <li>old Lockwood</li>
 
 <li>Open Locksport Picks</li>
@@ -602,6 +608,8 @@ Error message and password prompt
 <li>Orchids</li>
 
 <li>ORICA</li>
+
+<li>outlook.b64</li>
 
 <li>OutlookRules</li>
 
@@ -936,7 +944,7 @@ $param={{$:/temp/replace-tag!!replace}}/&gt;
 &lt;/div&gt;
 </pre>
 </div>
-<div created="20191130032053693" creator="Ian" modified="20191204081013160" modifier="Ian" title="$:/config/AutoSave">
+<div created="20191130032053693" creator="Ian" modified="20191205081638952" modifier="Ian" title="$:/config/AutoSave">
 <pre>no</pre>
 </div>
 <div created="20191126023634668" modified="20191126023658979" title="$:/config/Manager/Filter">
@@ -13142,7 +13150,7 @@ exports.newtiddler = NewtiddlerWidget;
     }
 }</pre>
 </div>
-<div created="20160111124429261" creator="TonGerner" list-after="$:/core/ui/ViewTemplate/tags" modified="20191204092350998" modifier="Ian" title="$:/plugins/tongerner/toolbar/tagging">
+<div created="20160111124429261" creator="TonGerner" list-after="$:/core/ui/ViewTemplate/tags" modified="20191204205310348" modifier="Ian" tags="$:/tags/ViewTemplate" title="$:/plugins/tongerner/toolbar/tagging">
 <pre>\whitespace trim
 
 \define lingo-base() $:/language/EditTemplate/
@@ -13185,7 +13193,7 @@ color:$(foregroundColor)$;
 &lt;/div&gt;
 </pre>
 </div>
-<div created="20190323080149511" list-after="$:/core/ui/ViewTemplate/tags" modified="20191204092412670" modifier="Ian" title="$:/plugins/tongerner/toolbar/toggle-fields-handling">
+<div created="20190323080149511" list-after="$:/core/ui/ViewTemplate/tags" modified="20191204220706200" modifier="Ian" title="$:/plugins/tongerner/toolbar/toggle-fields-handling">
 <pre>\define lingo-base() $:/language/EditTemplate/
 \define config-title()
 $:/config/EditTemplateFields/Visibility/$(currentField)$
@@ -13328,19 +13336,22 @@ wjam</pre>
 <div created="20191126021825699" modified="20191126021829642" title="$:/SiteTitle">
 <pre>Eyesee wiki</pre>
 </div>
+<div created="20191204232916745" creator="Ian" modified="20191204232916746" modifier="Ian" title="$:/state/showeditpreview">
+<pre>yes</pre>
+</div>
 <div created="20191204080957718" creator="Ian" modified="20191204080957718" modifier="Ian" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Saving</pre>
 </div>
 <div created="20191204080959794" creator="Ian" modified="20191204081011305" modifier="Ian" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/General</pre>
 </div>
-<div created="20191204040806011" creator="Ian" modified="20191204092310415" modifier="Ian" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20191204040806011" creator="Ian" modified="20191204233340095" modifier="Ian" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191204111711373" creator="Ian" list="LandingPage Personal [[Personal Board]]" modified="20191204111714606" modifier="Ian" title="$:/StoryList">
+<div created="20191205081634815" creator="Ian" list="$:/ControlPanel LandingPage Personal" modified="20191205081636773" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13356,19 +13367,19 @@ wjam</pre>
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;https://eyesee101.github.io/wiki/&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/Ian/Downloads/update/sync/Downloads/tiddlywiki.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
-            &quot;text&quot;: &quot;eyesee101.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/hostname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/hostname&quot;,
-            &quot;text&quot;: &quot;eyesee101.github.io&quot;
+            &quot;text&quot;: &quot;&quot;
         },
         &quot;$:/info/url/protocol&quot;: {
             &quot;title&quot;: &quot;$:/info/url/protocol&quot;,
-            &quot;text&quot;: &quot;https:&quot;
+            &quot;text&quot;: &quot;file:&quot;
         },
         &quot;$:/info/url/port&quot;: {
             &quot;title&quot;: &quot;$:/info/url/port&quot;,
@@ -13376,7 +13387,7 @@ wjam</pre>
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/wiki/&quot;
+            &quot;text&quot;: &quot;/C:/Users/Ian/Downloads/update/sync/Downloads/tiddlywiki.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -13384,7 +13395,7 @@ wjam</pre>
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;https://eyesee101.github.io&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -13401,8 +13412,11 @@ wjam</pre>
     }
 }</pre>
 </div>
-<div created="20191204035646909" creator="Ian" modified="20191204040753001" modifier="Ian" title="$:/temp/search">
+<div created="20191204220736818" creator="Ian" modified="20191204220800900" modifier="Ian" title="$:/temp/PAppDBeditPApp">
 <pre></pre>
+</div>
+<div created="20191204035646909" creator="Ian" modified="20191204232825084" modifier="Ian" title="$:/temp/search">
+<pre>stat</pre>
 </div>
 <div title="$:/temp/tiddler-sizes">
 <pre>&quot;&quot;&quot;
@@ -13860,10 +13874,10 @@ wjam</pre>
 <div created="20191106020759279" creator="Ian " datelastused="20191025000000000" experience="1" modified="20191203211435982" modifier="Ian" tags="Tech" title="Appium" tmap.id="803bc84e-2e4b-49c1-b107-70a883cf258f">
 <pre></pre>
 </div>
-<div boardtitle="ARCLB Board" clientcode="ARCLB" contact="Rick Capaldo" created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200131000000000" modified="20191203210823636" modifier="Ian" project="NBMS Regression suite" role="Automation Specialist" startdate="20191107000000000" state="Victoria" summary="update the Projects Regression suite to reflect the current state of the project" tags="VBScript Client Current Selenium UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
+<div boardtitle="ARCLB Board" clientcode="ARCLB" contact="Rick Capaldo" created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200127000000000" modified="20191204212917328" modifier="Ian" project="NBMS Regression suite" role="Automation Specialist" startdate="20191107000000000" state="Victoria" summary="update the Projects Regression suite to reflect the current state of the project" tags="VBScript Client Current Selenium UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
 <pre></pre>
 </div>
-<div created="20191125214555162" creator="Ian" dpbd-displayimages="yes" dpbd-displaytext="yes" dpbd-listwidth-em="" dpbd-listwidth-num="4" dpbd-widthismax="yes" list="[[ARCLB Board/Backlog]] [[ARCLB Board/Blocked]] [[ARCLB Board/In Progress]] [[ARCLB Board/Done]]" modified="20191201225428058" modifier="Ian" tags="Boards" title="ARCLB Board">
+<div created="20191125214555162" creator="Ian" dpbd-displayimages="yes" dpbd-displaytext="yes" dpbd-listwidth-em="" dpbd-listwidth-num="4" dpbd-widthismax="yes" list="[[ARCLB Board/Backlog]] [[ARCLB Board/Blocked]] [[ARCLB Board/In Progress]] [[ARCLB Board/Done]]" modified="20191204205820880" modifier="Ian" tags="ARCLB Boards" title="ARCLB Board">
 <pre>&lt;$transclude tiddler=&quot;$:/plugins/reidgould/dpbd/templates/view/Board&quot; mode=&quot;inline&quot; /&gt;</pre>
 </div>
 <div caption="Backlog" created="20191113004502726" creator="Ian " dpbd-collapse_in="" list="tid/SypfLy9hr tid/Hk5x8J9nH tid/S18Rr19hS tid/HkEoBkq2r tid/HkHZS1c2S tid/rJr0V15nH tid/H1usNy92r tid/SkpuN1qhS tid/H1XLEyc3S tid/rJXQNkq2S tid/HJjyV192B tid/B1R6Qy5nB tid/By8jQkc3r tid/By6u7J5hB tid/Syc1kJcnS tid/SJ5tC0K3S tid/Sy0E00Fnr [[Routine Issues - Products and Components]] tid/SkCaKCY2H" modified="20191201225428059" modifier="Ian" tags="[[ARCLB Board]]" title="ARCLB Board/Backlog" tmap.id="2164b231-f0a9-42cb-ba07-5196dd3cf7bd">
@@ -14137,10 +14151,8 @@ Begin building out Automation scripts to allow for others to extend the coverage
 
 &lt;$link&gt;&lt;$view field=&quot;title&quot;/&gt;&lt;/$link&gt; &lt;&lt;editbutton&gt;&gt; &lt;&lt;editfield&gt;&gt;</pre>
 </div>
-<div created="20191105100716064" creator="Ian " modified="20191203010850519" modifier="Ian" title="Clients" tmap.edges="{&quot;e38ac9a0-153b-4928-96f3-cc907696f197&quot;:{&quot;to&quot;:&quot;5850e93f-d2a0-4fc6-bfcd-5d93c99d95c0&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;6e2e472e-1051-4fe6-bcc9-818acf0dbeb2&quot;:{&quot;to&quot;:&quot;55a2119f-e11f-4692-b3ff-2068340b4b63&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;5ef8b909-dcb2-4392-8bbf-ef9f94e65768&quot;:{&quot;to&quot;:&quot;7ec83027-7c06-490c-ac6d-6cdd0940dd04&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0114d244-d2f7-4320-a05d-d390ccb49e06&quot;:{&quot;to&quot;:&quot;e7dfa85d-9094-4971-9b78-34842f87f323&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;b5921cdc-afe9-4a7f-8f37-6a6544653ef6&quot;:{&quot;to&quot;:&quot;b527991a-92ab-426a-ba47-651ac1899493&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;8c5ba96c-49d5-4d6b-88e7-3d36b7f8faa3&quot;:{&quot;to&quot;:&quot;24879f0b-a49b-49dc-8954-7b22b00c147a&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;82406372-dfe5-43bb-bea0-87d33ca656c9&quot;:{&quot;to&quot;:&quot;000ab818-2fa6-4d23-88d9-65053f576d78&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;fbb2654f-840a-44bc-953b-8303b8e80c05&quot;:{&quot;to&quot;:&quot;f7e212ce-5ab0-49b2-92d9-6c0df518fa44&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;47cbffe4-eb10-4b78-a6d4-1a7fe5143c24&quot;:{&quot;to&quot;:&quot;d0737b19-93e9-45d0-ab45-d5916846d20c&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d">
-<pre>* [[Environment Setup|Setup]]
-
-''All Clients''
+<div created="20191105100716064" creator="Ian " modified="20191204232620536" modifier="Ian" title="Clients" tmap.edges="{&quot;e38ac9a0-153b-4928-96f3-cc907696f197&quot;:{&quot;to&quot;:&quot;5850e93f-d2a0-4fc6-bfcd-5d93c99d95c0&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;6e2e472e-1051-4fe6-bcc9-818acf0dbeb2&quot;:{&quot;to&quot;:&quot;55a2119f-e11f-4692-b3ff-2068340b4b63&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;5ef8b909-dcb2-4392-8bbf-ef9f94e65768&quot;:{&quot;to&quot;:&quot;7ec83027-7c06-490c-ac6d-6cdd0940dd04&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0114d244-d2f7-4320-a05d-d390ccb49e06&quot;:{&quot;to&quot;:&quot;e7dfa85d-9094-4971-9b78-34842f87f323&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;b5921cdc-afe9-4a7f-8f37-6a6544653ef6&quot;:{&quot;to&quot;:&quot;b527991a-92ab-426a-ba47-651ac1899493&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;8c5ba96c-49d5-4d6b-88e7-3d36b7f8faa3&quot;:{&quot;to&quot;:&quot;24879f0b-a49b-49dc-8954-7b22b00c147a&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;82406372-dfe5-43bb-bea0-87d33ca656c9&quot;:{&quot;to&quot;:&quot;000ab818-2fa6-4d23-88d9-65053f576d78&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;fbb2654f-840a-44bc-953b-8303b8e80c05&quot;:{&quot;to&quot;:&quot;f7e212ce-5ab0-49b2-92d9-6c0df518fa44&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;47cbffe4-eb10-4b78-a6d4-1a7fe5143c24&quot;:{&quot;to&quot;:&quot;d0737b19-93e9-45d0-ab45-d5916846d20c&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d">
+<pre>''All Clients''
 
 * [[By Name|ByName]]
 * [[By Technology Used|ByTech]]
@@ -14568,6 +14580,9 @@ Use password `evva3ks`</pre>
 <div created="20191106023100923" creator="Ian " modified="20191202031422754" modifier="Ian" tags="State" title="New Zealand" tmap.id="cf29b8ae-c39c-44db-9843-19f850d2c04c">
 <pre></pre>
 </div>
+<div created="20191204220741459" creator="Ian" description="development text editor" modified="20191204220758482" modifier="Ian" tags="PortableApps" title="Notepad++" url="https://portableapps.com/apps/development/notepadpp_portable">
+<pre></pre>
+</div>
 <div created="20191202212058687" creator="Ian" make="Lockwood" modified="20191203021956150" modifier="Ian" purchasedate="20191201000000000" summary="Found in Shed" tags="Locksport Lock" title="old Lockwood">
 <pre></pre>
 </div>
@@ -14583,24 +14598,8 @@ Use password `evva3ks`</pre>
 <div created="20191106024235274" creator="Ian " modified="20191203040825607" modifier="Ian" state="Victoria" tags="[[Silk Test]] ALM Client DetailsRequired" title="ORICA" tmap.id="d69c9395-67c5-464f-a0c1-2c483f25b59a">
 <pre></pre>
 </div>
-<div created="20191108022621398" creator="Ian " modified="20191204032527342" modifier="Ian" title="OutlookRules" tmap.id="36d20151-337d-47af-a484-558d15387161" type="text/vnd.tiddlywiki">
-<pre>copy the below text out as a file `outlook.b64` then execute
-
-```
-certutil -decode outlook.b64 olr.rwz
-
-```
- from the command line
-
-see [ext[Base64 Commnd line|https://www.igorkromin.net/index.php/2017/04/26/base64-encode-or-decode-on-the-command-line-without-installing-extra-tools-on-linux-windows-or-macos/]]
-
-Then go to Outlook and import the rules file
-
-* Home-&gt;Rules-&gt;Manage rules &amp; Alerts
-* Options
-* Import Rules...
-
-```
+<div created="20191204233313335" creator="Ian" modified="20191204233330775" modifier="Ian" tags="" title="outlook.b64">
+<pre>```
 AAAUAAAAFAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAGAAAA
 FAAIUABlAHIAcwBvAG4AYQBsAAEAAAAAAAAAAQAAAAAAAAAGAAAA1wEAAAUA//8A
 AAwAQ1J1bGVFbGVtZW50kAEAAAEAAAAAAAAAAQAAAAGAZAAAAAEAAAAAAAAAAQAA
@@ -14664,6 +14663,25 @@ bnRzL2NuPTc4Njc3NjQxMTM4ZjQzZWJhMjc4YTk0ODkxMzc3Mzk0LUlDYWx3YXkA
 YgBsAG8AbwBkAC4AbwByAGcALgBhAHUAAAAAAAswADUALgAgAEcAZQBuAGUAcgBp
 AGMAAAAAAAGAQgEAAAAAAAAAAAAAAAAAAO/u7u7KYuVAAAAAAA==
 ```
+
+</pre>
+</div>
+<div created="20191108022621398" creator="Ian " modified="20191204233450092" modifier="Ian" title="OutlookRules" tmap.id="36d20151-337d-47af-a484-558d15387161" type="text/vnd.tiddlywiki">
+<pre>copy the text from [[outlook.b64]] as a file `outlook.b64` then execute
+
+```
+certutil -decode outlook.b64 olr.rwz
+
+```
+ from the command line
+
+see [ext[Base64 Commnd line|https://www.igorkromin.net/index.php/2017/04/26/base64-encode-or-decode-on-the-command-line-without-installing-extra-tools-on-linux-windows-or-macos/]]
+
+Then go to Outlook and import the rules file
+
+* Home-&gt;Rules-&gt;Manage rules &amp; Alerts
+* Options
+* Import Rules...
 
 </pre>
 </div>
@@ -14752,7 +14770,7 @@ AGMAAAAAAAGAQgEAAAAAAAAAAAAAAAAAAO/u7u7KYuVAAAAAAA==
 <div caption="Blocked" created="20191113005817777" creator="Ian " dpbd-collapse_in="[[Planit Board]]" list="" modified="20191126004140193" modifier="Ian " tags="[[Planit Board]]" title="Planit Blocked" tmap.id="2cc8e675-c64e-419a-b7b2-9e7b61498c7a">
 <pre></pre>
 </div>
-<div created="20191126004028188" list="[[Planit Backlog]] [[Planit Blocked]] [[Planit WIP]] [[Planit Done]]" modified="20191126004249783" tags="Boards" title="Planit Board">
+<div created="20191126004028188" creator="Ian" list="[[Planit Backlog]] [[Planit Blocked]] [[Planit WIP]] [[Planit Done]]" modified="20191204205319785" modifier="Ian" tags="Planit Boards" title="Planit Board">
 <pre>&lt;$transclude tiddler=&quot;$:/plugins/reidgould/dpbd/templates/view/Board&quot; mode=&quot;inline&quot; /&gt;</pre>
 </div>
 <div caption="{{!!shorttext}}" created="20191129043317942" creator="Ian" modified="20191203023323633" modifier="Ian" shorttext="Confluence" tags="Link Planit Info" title="Planit Confluence">
@@ -15170,12 +15188,14 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 &lt;$edit-text field=&quot;description&quot;  class=&quot;my-extended-memory-field&quot; tag=textarea autoHeight=&quot;yes&quot;/&gt;
 &lt;/$list&gt;</pre>
 </div>
-<div created="20140113085653136" creator="Stephan Hradek" description="Displays a [[Client DB]]'s entry." modified="20191203023233878" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewClient">
+<div created="20140113085653136" creator="Stephan Hradek" description="Displays a [[Client DB]]'s entry." modified="20191204205946523" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewClient">
 <pre>&lt;$list filter=&quot;[is[current]tag[Client]]&quot;&gt;
 
-&lt;$link to={{!!boardtitle}}&gt;&lt;$view field=&quot;boardtitle&quot;/&gt;&lt;/$link&gt;
 
-
+&lt;$set name=&quot;mytag&quot; value={{!!clientcode}}&gt;
+&lt;&lt;list-links &quot;[tag[Boards]tag&lt;mytag&gt;tag&lt;mytag&gt;sort[title]]&quot;&gt;&gt;
+&lt;&lt;list-links &quot;[tag[Info]tag&lt;mytag&gt;sort[title]]&quot;&gt;&gt;
+&lt;/$set&gt;
 
 |!Start Date |&lt;$view field=&quot;startdate&quot; format=&quot;date&quot; template=&quot;mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;startdate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!enddate |&lt;$view field=&quot;enddate&quot; format=&quot;date&quot; template=&quot;mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;enddate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
@@ -15200,10 +15220,7 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 &lt;$edit-text field=&quot;responsibility&quot;  class=&quot;my-extended-memory-field&quot; tag=textarea autoHeight=&quot;yes&quot;/&gt;
 
-''Useful links'':
-&lt;$set name=&quot;mytag&quot; value={{!!clientcode}}&gt;
-&lt;&lt;list-links &quot;[tag[Info]tag&lt;mytag&gt;sort[title]]&quot;&gt;&gt;
-&lt;/$set&gt;
+
 &lt;/$list&gt;
 
 
@@ -15256,9 +15273,10 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 <div created="20191126222710762" creator="Ian" modified="20191126222746198" modifier="Ian" tags="Locksport Link Templates" title="Warded Picks">
 <pre>http://lock-lab.com/wp-content/uploads/2016/04/Warded-Picks.jpg</pre>
 </div>
-<div created="20191105100658042" creator="Ian " modified="20191203044217761" modifier="Ian" title="Work" tmap.edges="{&quot;eaa38bd0-af33-40ba-a77f-fca6500a8b69&quot;:{&quot;to&quot;:&quot;2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0cf15d65-abe9-47a2-928b-d6c2e4626f38&quot;:{&quot;to&quot;:&quot;7cf0b834-3bdd-4c70-ba69-69d229c32884&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;1820a0a2-ea01-405b-9732-08572a1edf31&quot;:{&quot;to&quot;:&quot;5c9f2737-f4c3-450b-9f20-f4d0901cfd22&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;ee213f61-b257-43eb-894a-40efb239f7cf&quot;:{&quot;to&quot;:&quot;17397e88-24aa-4039-bb5c-b41bf0c0ab57&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="0a5bca4b-59a1-479f-8773-e46eb1f0229f">
+<div created="20191105100658042" creator="Ian " modified="20191204232602098" modifier="Ian" title="Work" tmap.edges="{&quot;eaa38bd0-af33-40ba-a77f-fca6500a8b69&quot;:{&quot;to&quot;:&quot;2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0cf15d65-abe9-47a2-928b-d6c2e4626f38&quot;:{&quot;to&quot;:&quot;7cf0b834-3bdd-4c70-ba69-69d229c32884&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;1820a0a2-ea01-405b-9732-08572a1edf31&quot;:{&quot;to&quot;:&quot;5c9f2737-f4c3-450b-9f20-f4d0901cfd22&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;ee213f61-b257-43eb-894a-40efb239f7cf&quot;:{&quot;to&quot;:&quot;17397e88-24aa-4039-bb5c-b41bf0c0ab57&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="0a5bca4b-59a1-479f-8773-e46eb1f0229f">
 <pre>''GENERAL''
 
+* [[Environment Setup|Setup]]
 * [[All Clients|Clients]]
 * [[Cheet Sheets]]
 * [[Coding]]
