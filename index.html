@@ -13361,7 +13361,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191208074824136" creator="Ian" list="LandingPage Personal Locks [[All locks]] 83/50" modified="20191208074832017" modifier="Ian" title="$:/StoryList">
+<div created="20191208074824136" creator="Ian" list="viewLock LandingPage Personal Locks [[All locks]] [[Master Lock 1904d]] [[old Lockwood]] 83/50" modified="20191208080137837" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13425,8 +13425,8 @@ wjam</pre>
 <div created="20191204220736818" creator="Ian" modified="20191205220730548" modifier="Ian" title="$:/temp/PAppDBeditPApp">
 <pre>fscPortable</pre>
 </div>
-<div created="20191204035646909" creator="Ian" modified="20191208042226923" modifier="Ian" title="$:/temp/search">
-<pre>link</pre>
+<div created="20191204035646909" creator="Ian" modified="20191208080120165" modifier="Ian" title="$:/temp/search">
+<pre>lock</pre>
 </div>
 <div modified="20191208043034445" modifier="Ian" title="$:/temp/tiddler-sizes">
 <pre>&quot;&quot;&quot;
@@ -14546,7 +14546,7 @@ Use password `evva3ks`</pre>
 <div created="20191106025959954" creator="Ian " dateformat="mmm YYYY" enddate="20161114" modified="20191202035106978" modifier="Ian" project="PoC Automation framework" role="Senior Technical Test Analyst" startdate="20161101" state="Victoria" summary=":Whilst at this client was to build a C#Selenium automation framework with the ability to interface with the client’s Multi-language, multi-currency shopping framework. The automation framework also needed to test the client’s framework via their newly created API." tags="PoC Selenium C# Client" title="Market Engine" tmap.id="d223582f-6594-4795-8795-be0fadaf7251">
 <pre></pre>
 </div>
-<div created="20191208033417957" creator="Ian" make="Masterlock" modified="20191208041958340" modifier="Ian" pincount="5" purchasedate="20191208000000000" summary="" tags="Lock" title="Master Lock 1904d" url="https://www.masterlocklatinamerica.com/home-and-hardware/product/1904D">
+<div created="20191208033417957" creator="Ian" make="Masterlock" modified="20191208080103333" modifier="Ian" pincount="5" purchasedate="20191208000000000" size="60 mm" summary="from Bunnings - 2 keys Made in china" tags="Lock" title="Master Lock 1904d" url="https://www.masterlocklatinamerica.com/home-and-hardware/product/1904D">
 <pre></pre>
 </div>
 <div created="20191208033540089" creator="Ian" modified="20191208033617390" modifier="Ian" tags="Lock Make" title="Masterlock">
@@ -14605,7 +14605,7 @@ Use password `evva3ks`</pre>
 <div created="20191204220741459" creator="Ian" description="development text editor" modified="20191204220758482" modifier="Ian" tags="PortableApps" title="Notepad++" url="https://portableapps.com/apps/development/notepadpp_portable">
 <pre></pre>
 </div>
-<div created="20191202212058687" creator="Ian" make="Lockwood" modified="20191203021956150" modifier="Ian" purchasedate="20191201000000000" summary="Found in Shed" tags="Locksport Lock" title="old Lockwood">
+<div created="20191202212058687" creator="Ian" make="Lockwood" modified="20191208075758419" modifier="Ian" purchasedate="20191201000000000" summary="Found in Shed.  Locked no key. No identifying Markings" tags="Locksport Lock" title="old Lockwood">
 <pre></pre>
 </div>
 <div created="20191126222330305" creator="Ian" modified="20191126222413940" modifier="Ian" tags="Templates Link Locksport" title="Open Locksport Picks">
@@ -15267,13 +15267,14 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 </pre>
 </div>
-<div created="20191202035254994" creator="Ian" modified="20191208042638923" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
+<div created="20191202035254994" creator="Ian" modified="20191208080223891" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
 <pre>&lt;$list filter=&quot;[is[current]tag[Lock]!tag[Make]!tag[Supplies]]&quot;&gt;
 
 |!Purchase Date |&lt;$view field=&quot;purchasedate&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;purchasedate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Date Last Picked |&lt;$view field=&quot;lastpicked&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastpicked&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Make|&lt;$edit field=&quot;make&quot;/&gt; |
 |!Number of pins|&lt;$edit field=&quot;pincount&quot;/&gt; |
+|!Size | &lt;$edit field=&quot;size&quot;/&gt; |
 |!URL | &lt;a href={{!!url}} target=&quot;_blank&quot;&gt;Details&lt;/a&gt;|
 
 ''Details'': 
