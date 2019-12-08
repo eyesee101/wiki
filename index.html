@@ -13203,7 +13203,7 @@ color:$(foregroundColor)$;
 &lt;/div&gt;
 </pre>
 </div>
-<div created="20190323080149511" list-after="$:/core/ui/ViewTemplate/tags" modified="20191205205720672" modifier="Ian" title="$:/plugins/tongerner/toolbar/toggle-fields-handling">
+<div created="20190323080149511" list-after="$:/core/ui/ViewTemplate/tags" modified="20191208041937565" modifier="Ian" tags="$:/tags/ViewTemplate" title="$:/plugins/tongerner/toolbar/toggle-fields-handling">
 <pre>\define lingo-base() $:/language/EditTemplate/
 \define config-title()
 $:/config/EditTemplateFields/Visibility/$(currentField)$
@@ -13355,13 +13355,13 @@ wjam</pre>
 <div created="20191204080959794" creator="Ian" modified="20191207062938494" modifier="Ian" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20191204040806011" creator="Ian" modified="20191208033737297" modifier="Ian" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Open</pre>
+<div created="20191204040806011" creator="Ian" modified="20191208042058424" modifier="Ian" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191208041509937" creator="Ian" list="LockEntry viewLock LandingPage Personal Locks [[locks by Make]] Masterlock [[Master Lock 1904d]]" modified="20191208041753338" modifier="Ian" title="$:/StoryList">
+<div created="20191208041509937" creator="Ian" list="viewLock LandingPage Personal Locks [[All locks]] [[locks by Make]] Masterlock [[Master Lock 1904d]]" modified="20191208042329975" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13425,8 +13425,8 @@ wjam</pre>
 <div created="20191204220736818" creator="Ian" modified="20191205220730548" modifier="Ian" title="$:/temp/PAppDBeditPApp">
 <pre>fscPortable</pre>
 </div>
-<div created="20191204035646909" creator="Ian" modified="20191208041727615" modifier="Ian" title="$:/temp/search">
-<pre>lock</pre>
+<div created="20191204035646909" creator="Ian" modified="20191208042226923" modifier="Ian" title="$:/temp/search">
+<pre>link</pre>
 </div>
 <div modified="20191205220820955" modifier="Ian" title="$:/temp/tiddler-sizes">
 <pre>&quot;&quot;&quot;
@@ -14546,7 +14546,7 @@ Use password `evva3ks`</pre>
 <div created="20191106025959954" creator="Ian " dateformat="mmm YYYY" enddate="20161114" modified="20191202035106978" modifier="Ian" project="PoC Automation framework" role="Senior Technical Test Analyst" startdate="20161101" state="Victoria" summary=":Whilst at this client was to build a C#Selenium automation framework with the ability to interface with the client’s Multi-language, multi-currency shopping framework. The automation framework also needed to test the client’s framework via their newly created API." tags="PoC Selenium C# Client" title="Market Engine" tmap.id="d223582f-6594-4795-8795-be0fadaf7251">
 <pre></pre>
 </div>
-<div created="20191208033417957" creator="Ian" make="Masterlock" modified="20191208034040998" modifier="Ian" pincount="5" purchasedate="20191208000000000" summary="https://www.masterlocklatinamerica.com/home-and-hardware/product/1904D" tags="Lock" title="Master Lock 1904d">
+<div created="20191208033417957" creator="Ian" make="Masterlock" modified="20191208041958340" modifier="Ian" pincount="5" purchasedate="20191208000000000" summary="" tags="Lock" title="Master Lock 1904d" url="https://www.masterlocklatinamerica.com/home-and-hardware/product/1904D">
 <pre></pre>
 </div>
 <div created="20191208033540089" creator="Ian" modified="20191208033617390" modifier="Ian" tags="Lock Make" title="Masterlock">
@@ -15267,14 +15267,14 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 </pre>
 </div>
-<div created="20191202035254994" creator="Ian" modified="20191208041920806" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
+<div created="20191202035254994" creator="Ian" modified="20191208042524590" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
 <pre>&lt;$list filter=&quot;[is[current]tag[Lock]!tag[Make]!tag[Supplies]]&quot;&gt;
 
 |!Purchase Date |&lt;$view field=&quot;purchasedate&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;purchasedate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Date Last Picked |&lt;$view field=&quot;lastpicked&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastpicked&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Make|&lt;$edit field=&quot;make&quot;/&gt; |
 |!Number of pins|&lt;$edit field=&quot;pincount&quot;/&gt; |
-|!URL | &lt;a href={{!!url}}&gt;Details&lt;/a&gt;|
+|!URL | &lt;a href={{!!url}} arget=&quot;_blank&quot;&gt;Details&lt;/a&gt;|
 
 ''Details'': 
 
