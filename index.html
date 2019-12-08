@@ -319,8 +319,6 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
-<li>$:/temp/NewTagName</li>
-
 <li>$:/temp/PAppDBeditPApp</li>
 
 <li>$:/temp/search</li>
@@ -13363,7 +13361,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191208034027089" creator="Ian" list="" modified="20191208034034113" modifier="Ian" title="$:/StoryList">
+<div created="20191208041509937" creator="Ian" list="LockEntry viewLock LandingPage Personal Locks [[locks by Make]] Masterlock [[Master Lock 1904d]]" modified="20191208041753338" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13411,27 +13409,24 @@ wjam</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;412&quot;
+            &quot;text&quot;: &quot;1280&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;869&quot;
+            &quot;text&quot;: &quot;720&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;en-AU&quot;
+            &quot;text&quot;: &quot;en-US&quot;
         }
     }
 }</pre>
 </div>
-<div created="20191208033617392" creator="Ian" modified="20191208033617392" modifier="Ian" title="$:/temp/NewTagName">
-<pre></pre>
-</div>
 <div created="20191204220736818" creator="Ian" modified="20191205220730548" modifier="Ian" title="$:/temp/PAppDBeditPApp">
 <pre>fscPortable</pre>
 </div>
-<div created="20191204035646909" creator="Ian" modified="20191208033218839" modifier="Ian" title="$:/temp/search">
-<pre></pre>
+<div created="20191204035646909" creator="Ian" modified="20191208041727615" modifier="Ian" title="$:/temp/search">
+<pre>lock</pre>
 </div>
 <div modified="20191205220820955" modifier="Ian" title="$:/temp/tiddler-sizes">
 <pre>&quot;&quot;&quot;
@@ -15272,13 +15267,14 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 </pre>
 </div>
-<div created="20191202035254994" creator="Ian" modified="20191203020317978" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
+<div created="20191202035254994" creator="Ian" modified="20191208041920806" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
 <pre>&lt;$list filter=&quot;[is[current]tag[Lock]!tag[Make]!tag[Supplies]]&quot;&gt;
 
 |!Purchase Date |&lt;$view field=&quot;purchasedate&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;purchasedate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Date Last Picked |&lt;$view field=&quot;lastpicked&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastpicked&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Make|&lt;$edit field=&quot;make&quot;/&gt; |
 |!Number of pins|&lt;$edit field=&quot;pincount&quot;/&gt; |
+|!URL | &lt;a href={{!!url}}&gt;Details&lt;/a&gt;|
 
 ''Details'': 
 
