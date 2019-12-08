@@ -13361,7 +13361,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191208041509937" creator="Ian" list="viewLock LandingPage Personal Locks [[All locks]] [[locks by Make]] Masterlock [[Master Lock 1904d]]" modified="20191208042329975" modifier="Ian" title="$:/StoryList">
+<div created="20191208041509937" creator="Ian" list="viewLock [[Master Lock 1904d]]" modified="20191208042540418" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -15267,14 +15267,14 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 </pre>
 </div>
-<div created="20191202035254994" creator="Ian" modified="20191208042524590" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
+<div created="20191202035254994" creator="Ian" modified="20191208042638923" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
 <pre>&lt;$list filter=&quot;[is[current]tag[Lock]!tag[Make]!tag[Supplies]]&quot;&gt;
 
 |!Purchase Date |&lt;$view field=&quot;purchasedate&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;purchasedate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Date Last Picked |&lt;$view field=&quot;lastpicked&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastpicked&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Make|&lt;$edit field=&quot;make&quot;/&gt; |
 |!Number of pins|&lt;$edit field=&quot;pincount&quot;/&gt; |
-|!URL | &lt;a href={{!!url}} arget=&quot;_blank&quot;&gt;Details&lt;/a&gt;|
+|!URL | &lt;a href={{!!url}} target=&quot;_blank&quot;&gt;Details&lt;/a&gt;|
 
 ''Details'': 
 
