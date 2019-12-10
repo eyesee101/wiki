@@ -13030,7 +13030,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20191210093005399" creator="Ian" list="LandingPage Personal Locks [[locks by Make]] Sparrows [[Practice Lock]]" modified="20191210093013274" modifier="Ian" title="$:/StoryList">
+<div created="20191210093005399" creator="Ian" list="viewLock LandingPage Personal Locks [[locks by Make]] Sparrows [[Practice Lock]]" modified="20191210093038541" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -13094,8 +13094,8 @@ wjam</pre>
 <div created="20191204220736818" creator="Ian" modified="20191205220730548" modifier="Ian" title="$:/temp/PAppDBeditPApp">
 <pre>fscPortable</pre>
 </div>
-<div created="20191204035646909" creator="Ian" modified="20191210092959348" modifier="Ian" title="$:/temp/search">
-<pre></pre>
+<div created="20191204035646909" creator="Ian" modified="20191210093033009" modifier="Ian" title="$:/temp/search">
+<pre>lock</pre>
 </div>
 <div modified="20191208043034445" modifier="Ian" title="$:/temp/tiddler-sizes">
 <pre>&quot;&quot;&quot;
@@ -14965,11 +14965,12 @@ Decode [ext[here|https://www.base64decode.org/]]</pre>
 
 </pre>
 </div>
-<div created="20191202035254994" creator="Ian" modified="20191208080223891" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
+<div created="20191202035254994" creator="Ian" modified="20191210093155557" modifier="Ian" tags="$:/tags/ViewTemplate template" title="viewLock">
 <pre>&lt;$list filter=&quot;[is[current]tag[Lock]!tag[Make]!tag[Supplies]]&quot;&gt;
 
 |!Purchase Date |&lt;$view field=&quot;purchasedate&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;/&gt;&lt;$edit-date  field=&quot;purchasedate&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Date Last Picked |&lt;$view field=&quot;lastpicked&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastpicked&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
+|!Date Last Pick Attempt |&lt;$view field=&quot;lastattempt&quot; format=&quot;date&quot; template=&quot;DD mmm YYYY&quot;}/&gt;&lt;$edit-date  field=&quot;lastattempt&quot; icon=&quot;$:/plugins/kixam/datepicker/icon&quot; tag=div /&gt; |
 |!Make|&lt;$edit field=&quot;make&quot;/&gt; |
 |!Number of pins|&lt;$edit field=&quot;pincount&quot;/&gt; |
 |!Size | &lt;$edit field=&quot;size&quot;/&gt; |
