@@ -363,6 +363,8 @@ Error message and password prompt
 
 <li>All CLients by State</li>
 
+<li>All Clients by year</li>
+
 <li>All locks</li>
 
 <li>ALM</li>
@@ -10615,11 +10617,15 @@ $:/state/folded/$(currentTiddler)$
 <div created="20191126082919744" creator="Ian" modified="20191126082923150" modifier="Ian" title="$:/GitHub/Username">
 <pre>eyesee101</pre>
 </div>
-<div dpbd="Blocked plugin (due to incoming 1.0.2 being older than existing 1.0.2)" message-$:="" plugin-type="import" plugins="" reidgould="" selection-$:="" shortid="Blocked plugin (due to incoming 0.0.1 being older than existing 0.0.1)" status="pending" title="$:/Import" type="application/json">
+<div dpbd="Blocked plugin (due to incoming 1.0.2 being older than existing 1.0.2)" message-$:="" plugin-type="import" plugins="" reidgould="" selection-$:="" selection-$:/plugins/reidgould/dpbd="unchecked" selection-$:/plugins/reidgould/shortid="unchecked" shortid="Blocked plugin (due to incoming 0.0.1 being older than existing 0.0.1)" status="pending" title="$:/Import" type="application/json">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/reidgould/dpbd&quot;: {},
-        &quot;$:/plugins/reidgould/shortid&quot;: {}
+        &quot;$:/plugins/reidgould/shortid&quot;: {},
+        &quot;Untitled&quot;: {
+            &quot;title&quot;: &quot;Untitled&quot;,
+            &quot;text&quot;: &quot;Jacobs&quot;
+        }
     }
 }</pre>
 </div>
@@ -11220,13 +11226,13 @@ wjam</pre>
 <div created="20200120083523236" creator="Ian" modified="20200130021950006" modifier="Ian" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/GitHub</pre>
 </div>
-<div created="20200120220424327" creator="Ian" modified="20200130042739311" modifier="Ian" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Tools</pre>
+<div created="20200120220424327" creator="Ian" modified="20200130042958620" modifier="Ian" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Recent</pre>
 </div>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20200130033428932" creator="Ian" list="ACCC [[All CLients by State]] [[All Client Lists]] Work LandingPage" modified="20200130042633924" modifier="Ian" title="$:/StoryList">
+<div created="20200130033428932" creator="Ian" list="[[All CLients by State]] [[All Client Lists]] Work LandingPage" modified="20200130044618999" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200120220922152" creator="Ian" modified="20200121034339168" modifier="Ian" title="$:/temp/BookDBeditBook">
@@ -11290,8 +11296,8 @@ wjam</pre>
     }
 }</pre>
 </div>
-<div created="20200115020409859" creator="Ian" modified="20200129212104941" modifier="Ian" title="$:/temp/search">
-<pre>20200130</pre>
+<div created="20200115020409859" creator="Ian" modified="20200130044524488" modifier="Ian" title="$:/temp/search">
+<pre>Jacobs</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -11480,6 +11486,12 @@ wjam</pre>
 &lt;ul&gt;&lt;$list filter=&quot;[state{!!state}]&quot;&gt;&lt;li&gt;{{!!title||clientEntry}}&lt;/li&gt;&lt;/$list&gt;&lt;/ul&gt;
 &lt;/$list&gt;</pre>
 </div>
+<div created="20200130042835718" creator="Ian" modified="20200130043029857" modifier="Ian" tags="" title="All Clients by year">
+<pre>&lt;$list filter=&quot;[tag[Client]!year[]each[year]sort[year]]&quot;&gt;
+'' &lt;$view field=&quot;year&quot;/&gt; ''
+&lt;ul&gt;&lt;$list filter=&quot;[year{!!year}]&quot;&gt;&lt;li&gt;{{!!title||clientEntry}}&lt;/li&gt;&lt;/$list&gt;&lt;/ul&gt;
+&lt;/$list&gt;</pre>
+</div>
 <div created="20191202211944508" creator="Ian" modified="20191208033352933" modifier="Ian" title="All locks">
 <pre>&lt;table&gt;
 &lt;$list filter=&quot;1 5 9 13 17 21 25 29 33 37 41 45 49 53 57 61 65&quot; variable =&quot;rows&quot;&gt;
@@ -11500,10 +11512,10 @@ wjam</pre>
 <div created="20191126224551836" creator="Ian" modified="20191126224641058" modifier="Ian" tags="Link Locksport Docs" title="American Padlock Service Manual">
 <pre>https://locklab.com/wp-content/uploads/2016/03/American-Padlock-Service-Manual-2012.pdf?x79895</pre>
 </div>
-<div boardtitle="" clientcode="AMPNSW" created="20191201220731929" creator="Ian" enddate="20160826000000000" modified="20191202033621394" modifier="Ian" project="REST/SOAP Protocols Robotframework POC" responsibility="Build an API Keyword library using Robotframework. Demonstrate the API library and document its use within the AMP testing environment." role="Senior Technical Test Analyst" startdate="20160601000000000" state="New South Wales" summary="This Client engagement required the building of a Robotframework Library for use in API testing using both REST and SOAP protocols." tags="Client RestAssured RobotFramework API Python PoC" title="AMP NSW">
+<div boardtitle="" clientcode="AMPNSW" created="20191201220731929" creator="Ian" enddate="20160826000000000" modified="20200130043128245" modifier="Ian" project="REST/SOAP Protocols Robotframework POC" responsibility="Build an API Keyword library using Robotframework. Demonstrate the API library and document its use within the AMP testing environment." role="Senior Technical Test Analyst" startdate="20160601000000000" state="New South Wales" summary="This Client engagement required the building of a Robotframework Library for use in API testing using both REST and SOAP protocols." tags="Client RestAssured RobotFramework API Python PoC" title="AMP NSW" year="2016">
 <pre></pre>
 </div>
-<div clientcode="AMPVIC" created="20191201221218900" creator="Ian" enddate="20161104000000000" modified="20191202033642339" modifier="Ian" project="Salesforce Robotframework POC" role="Senior Technical Test Analyst" startdate="20160901000000000" state="Victoria" summary="During this engagement I was required to prove that Robotframework could be used to interface to/Automate Salesforce. By the end of the engagement a base framework had been created that was easily extendable and was able to be used for any customised forms that the client had created." tags="Client [[Sales Force]] RobotFramework PoC Python" title="AMP VIC">
+<div clientcode="AMPVIC" created="20191201221218900" creator="Ian" enddate="20161104000000000" modified="20200130043559348" modifier="Ian" project="Salesforce Robotframework POC" role="Senior Technical Test Analyst" startdate="20160901000000000" state="Victoria" summary="During this engagement I was required to prove that Robotframework could be used to interface to/Automate Salesforce. By the end of the engagement a base framework had been created that was easily extendable and was able to be used for any customised forms that the client had created." tags="Client [[Sales Force]] RobotFramework PoC Python" title="AMP VIC" year="2016">
 <pre></pre>
 </div>
 <div created="20191213012923783" creator="Ian" modified="20191213012956679" modifier="Ian" tags="" title="Ancient Civilisations">
@@ -11521,9 +11533,9 @@ wjam</pre>
 <div created="20191106020759279" creator="Ian " datelastused="20191025000000000" experience="1" modified="20191203211435982" modifier="Ian" tags="Tech" title="Appium" tmap.id="803bc84e-2e4b-49c1-b107-70a883cf258f">
 <pre></pre>
 </div>
-<div boardtitle="ARCLB Board" clientcode="ARCLB" contact="Rick Capaldo" created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200129000000000" modified="20200129212635704" modifier="Ian" project="NBMS Regression suite" responsibility="* report progress to stakeholders.  
+<div boardtitle="ARCLB Board" clientcode="ARCLB" contact="Rick Capaldo" created="20191120000000000" creator="Ian " dateformat="mmm YYYY" enddate="20200129000000000" modified="20200130043634524" modifier="Ian" project="NBMS Regression suite" responsibility="* report progress to stakeholders.  
 * Extend current framework.  
-* report on improvements required in the framework" role="Automation Specialist" startdate="20191107000000000" state="Victoria" summary="update the Projects Regression suite to reflect the current state of the project.  Extending current framework to include new functionality." tags="VBScript Client Selenium UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d">
+* report on improvements required in the framework" role="Automation Specialist" startdate="20191107000000000" state="Victoria" summary="update the Projects Regression suite to reflect the current state of the project.  Extending current framework to include new functionality." tags="VBScript Client Selenium UFT" title="ARCLB" tmap.id="a71d6974-2ccc-45cf-8cb2-d0017391fb4d" year="2019">
 <pre></pre>
 </div>
 <div created="20191125214555162" creator="Ian" dpbd-displayimages="yes" dpbd-displaytext="yes" dpbd-listwidth-num="3" dpbd-widthismax="yes" list="tid/HJ9z-536r tid/B1ogb93aH tid/rkx5xc3aB tid/Bkqbe52pS tid/BJfu-5hpr [[ARCLB Board/Done]]" modified="20200106230621861" modifier="Ian" tags="ARCLB Boards" title="ARCLB Board">
@@ -11557,7 +11569,7 @@ wjam</pre>
 ** Badge = 0003
 </pre>
 </div>
-<div clientcode="ASB" created="20191201233838232" creator="Ian" modified="20191203213130651" modifier="Ian" state="New Zealand" tags="VBA Excel Client ALM" title="ASB">
+<div clientcode="ASB" created="20191201233838232" creator="Ian" modified="20200130044416588" modifier="Ian" state="New Zealand" tags="VBA Excel Client ALM" title="ASB" year="2014">
 <pre></pre>
 </div>
 <div created="20191129040055908" creator="Ian" modified="20191129040120103" modifier="Ian" tags="Link Keyboard" title="ASETNIOP">
@@ -11566,7 +11578,7 @@ wjam</pre>
 <div created="20191204104522060" creator="Ian" lastattempt="20191205000000000" make="Lockwood" modified="20191210093637694" modifier="Ian" pincount="4" purchasedate="20181203000000000" size="30 mm" summary="Long shank - has keys" tags="Lock" title="ASSA ABLOY 120/30">
 <pre></pre>
 </div>
-<div clientcode="Aurizon" created="20191106021054169" creator="Ian " dateformat="mmm YYYY" enddate="20160701" modified="20191203210832858" modifier="Ian" project="Rail tracking Automation POC" responsibility="Install and test ability of Automation tools. Document and report on findings Assist in producing a Test Process Optimization document." role="Senior Technical Test Analyst" startdate="20160601" state="Queensland" summary="Whilst at this client I was required to perform a Proof of Concept (PoC) for Automating one of the client's projects. The client's project was responsible for tracking and scheduling of trains within the Brisbane rail system. During the PoC four automation tools were assessed, Tosca, Silk Test, UFT, and Ranorex. For the PoC the main application to be automated had been deemed impossible to automate. After using Ranorex' image processing it was found that a mix of both standard Automation techniques and image processing I was able to prove that the application was automatable." tags="VBScript Client [[Silk Test]] PoC Tosca UFT Ranorex" title="Aurizon" tmap.id="2f5f2f19-f24d-489f-bfc3-1185405443c9">
+<div clientcode="Aurizon" created="20191106021054169" creator="Ian " dateformat="mmm YYYY" enddate="20160701" modified="20200130043452275" modifier="Ian" project="Rail tracking Automation POC" responsibility="Install and test ability of Automation tools. Document and report on findings Assist in producing a Test Process Optimization document." role="Senior Technical Test Analyst" startdate="20160601" state="Queensland" summary="Whilst at this client I was required to perform a Proof of Concept (PoC) for Automating one of the client's projects. The client's project was responsible for tracking and scheduling of trains within the Brisbane rail system. During the PoC four automation tools were assessed, Tosca, Silk Test, UFT, and Ranorex. For the PoC the main application to be automated had been deemed impossible to automate. After using Ranorex' image processing it was found that a mix of both standard Automation techniques and image processing I was able to prove that the application was automatable." tags="VBScript Client [[Silk Test]] PoC Tosca UFT Ranorex" title="Aurizon" tmap.id="2f5f2f19-f24d-489f-bfc3-1185405443c9" year="2016">
 <pre></pre>
 </div>
 <div created="20191106024349726" creator="Ian " modified="20191202031713958" modifier="Ian" tags="State" title="Australian Capital Territory" tmap.id="2e285144-c6c4-4ede-b567-1daf40555c88">
@@ -11816,15 +11828,15 @@ also set up gmail sending with server - smtp.gmail.com port - 465 and SSL.  use 
 <div author="Terry Pratchett" created="20191211221407759" creator="Ian" modified="20191213025100112" modifier="Ian" order="6" series="Discworld" tags="Book Witches Discworld" title="Carpe Jugulum">
 <pre></pre>
 </div>
-<div clientcode="CCI" created="20191106030609401" creator="Ian " dateformat="mmm YYYY" enddate="20180901" modified="20191202033740509" modifier="Ian" project="Figtree PoC Automation Framework" responsibility=":Perform a brief PoC on Automating the web application Figtree to find the best fit
+<div clientcode="CCI" created="20191106030609401" creator="Ian " dateformat="mmm YYYY" enddate="20180901" modified="20200130043658869" modifier="Ian" project="Figtree PoC Automation Framework" responsibility=":Perform a brief PoC on Automating the web application Figtree to find the best fit
 
-Begin building out Automation scripts to allow for others to extend the coverage and usage of the framework." role="Consultant" startdate="20180801" state="Victoria" summary="At CCI I was required to perform a PoC on the Automation of the Figtree web application." tags="Client PoC Gauge Java Selenium" title="Cathlic Church Insurance" tmap.id="efe4cc64-d11d-4e28-be30-44c393188079">
+Begin building out Automation scripts to allow for others to extend the coverage and usage of the framework." role="Consultant" startdate="20180801" state="Victoria" summary="At CCI I was required to perform a PoC on the Automation of the Figtree web application." tags="Client PoC Gauge Java Selenium" title="Cathlic Church Insurance" tmap.id="efe4cc64-d11d-4e28-be30-44c393188079" year="2018">
 <pre></pre>
 </div>
-<div contact="Michael Salim" created="20191201212644895" creator="Ian" enddate="20130101000000000" modified="20191203213050650" modifier="Ian" project="Berlin" responsibility="Ensure that the data entered into Quality Centre adhered to the standards set by the bank. Prepare daily statistics to enable Test managers and Project Managers to accurately and easily monitor project progression. Build a series of utilities to allow test managers to check the integrity of projects within Quality centre. Ensure that all test execution and defect data was correctly entered to ensure accuracy of reporting. Ensure that defects were actioned correctly and in a timely manner." role="Quality Centre Coordinator/Defect Coordinator" startdate="20120902000000000" state="New South Wales" summary="My role whilst at the CBA was to design and build a system of real-time reporting test execution and requirement coverage from multiple Quality Centre project databases. This was achieved by using both MS Excel and MS Access." tags="VBA Client Excel ALM Access" title="CBA">
+<div contact="Michael Salim" created="20191201212644895" creator="Ian" enddate="20130101000000000" modified="20200130043200146" modifier="Ian" project="Berlin" responsibility="Ensure that the data entered into Quality Centre adhered to the standards set by the bank. Prepare daily statistics to enable Test managers and Project Managers to accurately and easily monitor project progression. Build a series of utilities to allow test managers to check the integrity of projects within Quality centre. Ensure that all test execution and defect data was correctly entered to ensure accuracy of reporting. Ensure that defects were actioned correctly and in a timely manner." role="Quality Centre Coordinator/Defect Coordinator" startdate="20120902000000000" state="New South Wales" summary="My role whilst at the CBA was to design and build a system of real-time reporting test execution and requirement coverage from multiple Quality Centre project databases. This was achieved by using both MS Excel and MS Access." tags="VBA Client Excel ALM Access" title="CBA" year="2012">
 <pre></pre>
 </div>
-<div created="20191106025709475" creator="Ian " enddate="20160916000000000" modified="20200130042455606" modifier="Ian" startdate="20160705000000000" state="Victoria" tags="Client Selenium C# PoC DetailsRequired" title="CBM" tmap.id="0c26e547-0a1f-48b7-9a7f-b85bcd020392">
+<div created="20191106025709475" creator="Ian " enddate="20160916000000000" modified="20200130043724264" modifier="Ian" startdate="20160705000000000" state="Victoria" tags="Client Selenium C# PoC DetailsRequired" title="CBM" tmap.id="0c26e547-0a1f-48b7-9a7f-b85bcd020392" year="2016">
 <pre></pre>
 </div>
 <div author="Octavia Randolph" created="20191213001243706" creator="Ian" description="" lastreaddate="" modified="20200121034254743" modifier="Ian" order="B" series="Circle of Ceridwen" tags="Book" title="Ceridwen of Kilton">
@@ -11894,7 +11906,7 @@ Begin building out Automation scripts to allow for others to extend the coverage
 <div created="20191130031755025" creator="Ian" modified="20191216211430572" modifier="Ian" tags="Work Info Link Coding" title="Coding">
 <pre>*[ext[ Power of 10 Rules|https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code]]</pre>
 </div>
-<div created="20191105100744810" creator="Ian " dateformat="mmm YYYY" enddate="20180601" modified="20191202035104438" modifier="Ian" project="Liquor" responsibility=":Update outdated/existing Automation framework scripts to reflect the current version of the application under test (MSDynamics). Ensure current ongoing staff had sufficient knowledge of the scripts to execute the scripts and to produce test execution reports." role="Consultant" startdate="20180501" state="Victoria" summary="During my placement at Coles I was responsible for uplifting a Ranorex automation framework that had not been used for several years." tags="MSDynamics Ranorex Client" title="Coles" tmap.id="0a09e7ba-e730-4a13-9c2a-7d6b28275f03">
+<div created="20191105100744810" creator="Ian " dateformat="mmm YYYY" enddate="20180601" modified="20200130043748505" modifier="Ian" project="Liquor" responsibility=":Update outdated/existing Automation framework scripts to reflect the current version of the application under test (MSDynamics). Ensure current ongoing staff had sufficient knowledge of the scripts to execute the scripts and to produce test execution reports." role="Consultant" startdate="20180501" state="Victoria" summary="During my placement at Coles I was responsible for uplifting a Ranorex automation framework that had not been used for several years." tags="MSDynamics Ranorex Client" title="Coles" tmap.id="0a09e7ba-e730-4a13-9c2a-7d6b28275f03" year="2018">
 <pre></pre>
 </div>
 <div created="20191203004831380" creator="Ian" description="" modified="20191203013958039" modifier="Ian" tags="AndroidApp" title="Commbank" url="https://play.google.com/store/apps/details?id=com.commbank.netbank&amp;hl=en_AU">
@@ -12076,7 +12088,7 @@ and set up [[this|BuildUpdate.bat]] batch file.  This will result in the file up
 <div created="20191203212818434" creator="Ian" datelastused="19891201000000000" experience="5" modified="20191203212926382" modifier="Ian" tags="Language Tech" title="Fortran">
 <pre></pre>
 </div>
-<div contact="Donna Kyle" created="20191106020101368" creator="Ian " enddate="20111007000000000" modified="20200130042410928" modifier="Ian" startdate="20101125000000000" state="Victoria" tags="VBScript UFT Excel ALM Client DetailsRequired" title="Fosters" tmap.id="eb550851-df18-4520-9130-61e1650a10e9">
+<div contact="Donna Kyle" created="20191106020101368" creator="Ian " enddate="20111007000000000" modified="20200130043821820" modifier="Ian" startdate="20101125000000000" state="Victoria" tags="VBScript UFT Excel ALM Client DetailsRequired" title="Fosters" tmap.id="eb550851-df18-4520-9130-61e1650a10e9" year="2011">
 <pre></pre>
 </div>
 <div created="20191203000205985" creator="Ian" description="File synchronisation" modified="20191203022351399" modifier="Ian" tags="PortableApps" title="FreeFileSync" url="https://portableapps.com/apps/utilities/freefilesync-portable">
@@ -13817,12 +13829,12 @@ GwDgBgAAhjMBAAAA
 <div author="Terry Pratchett" created="20191211220640689" creator="Ian" modified="20191213045751647" modifier="Ian" order="5" series="Discworld" tags="Book Discworld Wizards tid/r1OZt9x0S" title="Interesting Times">
 <pre></pre>
 </div>
-<div created="20191106025412958" creator="Ian " dateformat="mmm YYYY" enddate="20160501" modified="20191202035106820" modifier="Ian" project="Deployment Train Upgrade" responsibility="- Install and integrate the IBM Urbancode suite on to IP Australia's internal network.
+<div created="20191106025412958" creator="Ian " dateformat="mmm YYYY" enddate="20160501" modified="20200130043059943" modifier="Ian" project="Deployment Train Upgrade" responsibility="- Install and integrate the IBM Urbancode suite on to IP Australia's internal network.
 - Train Key staff on correct use of Urbancode to produce best results for IP Australia
-- Create custom plugins to assist with the deployment of IP Australia's applications." role="DevOps Specialist" startdate="20160301" state="Australian Capital Territory" summary="My time with this client was spent implementing an Urbancode framework to aid in the deployment of applications across IP Australia's infrastructure. Also during this time I trained key IP Australia personal on how best to use Urbancode to produce results. This position also found me creating Urbancode plugins to cater for IP Australia's own unique circumstances." tags="DevOps UrbanCode Client" title="IPA" tmap.id="6d238cb2-2a17-46e6-a974-bf52a30fc0f6">
+- Create custom plugins to assist with the deployment of IP Australia's applications." role="DevOps Specialist" startdate="20160301" state="Australian Capital Territory" summary="My time with this client was spent implementing an Urbancode framework to aid in the deployment of applications across IP Australia's infrastructure. Also during this time I trained key IP Australia personal on how best to use Urbancode to produce results. This position also found me creating Urbancode plugins to cater for IP Australia's own unique circumstances." tags="DevOps UrbanCode Client" title="IPA" tmap.id="6d238cb2-2a17-46e6-a974-bf52a30fc0f6" year="2016">
 <pre></pre>
 </div>
-<div created="20191106022013914" creator="Ian " modified="20191203040825208" modifier="Ian" tags="ALM Client DetailsRequired" title="Jacobs" tmap.id="25cd4063-e310-4c9d-b4b4-c78a4cd1ebfc">
+<div created="20191106022013914" creator="Ian " modified="20200130044628472" modifier="Ian" state="New South Wales" tags="ALM Client DetailsRequired" title="Jacobs" tmap.id="25cd4063-e310-4c9d-b4b4-c78a4cd1ebfc" year="2014">
 <pre></pre>
 </div>
 <div created="20191106020515652" creator="Ian " datelastused="20191025000000000" experience="5" modified="20191203210409030" modifier="Ian" tags="Language Tech" title="Java" tmap.id="9d03b57d-c99d-4f4f-9df2-064ec34b4d74">
@@ -13910,9 +13922,9 @@ GwDgBgAAhjMBAAAA
 <div created="20191205220703365" creator="Ian" description="screenshot utility" modified="20191205220719985" modifier="Ian" tags="PortableApps" title="Lightscreen Portable" url="https://portableapps.com/apps/utilities/lightscreen_portable">
 <pre></pre>
 </div>
-<div contact="Donna Kyle" created="20191105101706410" creator="Ian " dateformat="mmm YYYY" enddate="20191025" modified="20191203210851085" modifier="Ian" project="EWMS Reset" responsibility="- Build XML Generator for data feeds using Excel
+<div contact="Donna Kyle" created="20191105101706410" creator="Ian " dateformat="mmm YYYY" enddate="20191025" modified="20200130043854348" modifier="Ian" project="EWMS Reset" responsibility="- Build XML Generator for data feeds using Excel
 - UFT - SAP framework PoC
-- Support of Automation staff on site" role="Consultant" startdate="20191014" state="Victoria" summary="Whilst at Linfox I was responsible for overseeing junior automation staff. I performed a PoC of best Practice for a UFT framework used to automate SAP EWMS to allow for rapid testing to ensure new wharehouse systems had been setup correctly." tags="VBScript PoC UFT Client" title="Linfox" tmap.id="b5dccd17-cf84-42ef-aac9-ae5a3931de1f">
+- Support of Automation staff on site" role="Consultant" startdate="20191014" state="Victoria" summary="Whilst at Linfox I was responsible for overseeing junior automation staff. I performed a PoC of best Practice for a UFT framework used to automate SAP EWMS to allow for rapid testing to ensure new wharehouse systems had been setup correctly." tags="VBScript PoC UFT Client" title="Linfox" tmap.id="b5dccd17-cf84-42ef-aac9-ae5a3931de1f" year="2019">
 <pre></pre>
 </div>
 <div created="20191125050037305" creator="Ian " modified="20191126215000816" modifier="Ian" title="Links" tmap.id="e0273c58-dfe4-4d57-906a-bf2c8e0ac660">
@@ -14051,7 +14063,7 @@ Use password `evva3ks`</pre>
 <div created="20191212234503929" creator="Ian" modified="20200106003321607" modifier="Ian" tags="Books Personal" title="Manage Kindle">
 <pre>[ext[Here|https://www.amazon.com.au/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com.au%2Fhz%2Fmycd%2Fmyx&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=auflex&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;#/home/content/booksAll/dateDsc/]]</pre>
 </div>
-<div created="20191106025959954" creator="Ian " dateformat="mmm YYYY" enddate="20161114" modified="20191202035106978" modifier="Ian" project="PoC Automation framework" role="Senior Technical Test Analyst" startdate="20161101" state="Victoria" summary=":Whilst at this client was to build a C#Selenium automation framework with the ability to interface with the client’s Multi-language, multi-currency shopping framework. The automation framework also needed to test the client’s framework via their newly created API." tags="PoC Selenium C# Client" title="Market Engine" tmap.id="d223582f-6594-4795-8795-be0fadaf7251">
+<div created="20191106025959954" creator="Ian " dateformat="mmm YYYY" enddate="20161114" modified="20200130043914171" modifier="Ian" project="PoC Automation framework" role="Senior Technical Test Analyst" startdate="20161101" state="Victoria" summary=":Whilst at this client was to build a C#Selenium automation framework with the ability to interface with the client’s Multi-language, multi-currency shopping framework. The automation framework also needed to test the client’s framework via their newly created API." tags="PoC Selenium C# Client" title="Market Engine" tmap.id="d223582f-6594-4795-8795-be0fadaf7251" year="2016">
 <pre></pre>
 </div>
 <div author="Terry Pratchett" created="20191211221345700" creator="Ian" modified="20191213025223245" modifier="Ian" order="5" series="Discworld" tags="Book Witches Discworld" title="Maskerade">
@@ -14066,7 +14078,7 @@ Use password `evva3ks`</pre>
 <div created="20191105101357336" creator="Ian " modified="20191203040823953" modifier="Ian" state="Victoria" tags="Tosca Python Client DetailsRequired" title="MediBank" tmap.id="9cec7c2f-e657-4539-831e-8ccd587f342f">
 <pre></pre>
 </div>
-<div created="20191106020234194" creator="Ian " enddate="20120615000000000" modified="20200130042324573" modifier="Ian" startdate="20111017000000000" state="Victoria" tags="VBA VBScript UFT Excel ALM Client DetailsRequired" title="Melbourne IT" tmap.id="80e23026-66e9-43d6-bfbd-0a3f58079809">
+<div created="20191106020234194" creator="Ian " enddate="20120615000000000" modified="20200130043959704" modifier="Ian" startdate="20111017000000000" state="Victoria" tags="VBA VBScript UFT Excel ALM Client DetailsRequired" title="Melbourne IT" tmap.id="80e23026-66e9-43d6-bfbd-0a3f58079809" year="2011">
 <pre></pre>
 </div>
 <div author="Terry Pratchett" created="20191213010453724" creator="Ian" description="" lastreaddate="" modified="20191213025422582" modifier="Ian" order="2" series="Discworld" tags="[[City Watch]] Discworld Book" title="Men at Arms">
@@ -14075,7 +14087,7 @@ Use password `evva3ks`</pre>
 <div created="20191126213309346" creator="Ian" modified="20191126213429312" modifier="Ian" tags="Docs Link Locksport" title="MIT Guide">
 <pre>* [ext[https://www.lysator.liu.se/mit-guide/MITLockGuide.pdf]]</pre>
 </div>
-<div created="20191106030708698" creator="Ian " dateformat="mmm YYYY" enddate="20180801" modified="20191202035107293" modifier="Ian" project="PoC API Automation framework" responsibility="Architect and build a framework for automation of the APIs used for document retrieval and manipulation" role="Consultant" startdate="20180701" state="Victoria" summary="Whilst at MLCL I was required to build a framework that would allow for testing of API calls. The framework needed to be able to run across several systems" tags="PoC Gauge RestAssured Java API Client" title="MLC Life" tmap.id="2ea446c8-b0e2-45aa-943e-7220edc38edb">
+<div created="20191106030708698" creator="Ian " dateformat="mmm YYYY" enddate="20180801" modified="20200130044022158" modifier="Ian" project="PoC API Automation framework" responsibility="Architect and build a framework for automation of the APIs used for document retrieval and manipulation" role="Consultant" startdate="20180701" state="Victoria" summary="Whilst at MLCL I was required to build a framework that would allow for testing of API calls. The framework needed to be able to run across several systems" tags="PoC Gauge RestAssured Java API Client" title="MLC Life" tmap.id="2ea446c8-b0e2-45aa-943e-7220edc38edb" year="2018">
 <pre></pre>
 </div>
 <div author="Terry Pratchett" created="20191213005313223" creator="Ian" description="" lastreaddate="" modified="20191213025413831" modifier="Ian" order="3" series="Discworld" tags="[[Industrial Revolution]] Discworld Book" title="Monstrous Regiment">
@@ -14096,13 +14108,13 @@ Use password `evva3ks`</pre>
 <div created="20191106024127178" creator="Ian " modified="20191203213218417" modifier="Ian" state="Victoria" tags="VBA VBScript Excel ALM Client DetailsRequired" title="NAB" tmap.id="5c9d0328-c1ae-4b6e-b8aa-5859040fd20c">
 <pre></pre>
 </div>
-<div clientcode="" contact="Maeve Mcneala" created="20191201235751910" creator="Ian" enddate="20170125000000000" modified="20191202035107743" modifier="Ian" project="AIM" responsibility="- Oversee junior automation staff on site
-- Architect a framework for testing data migration." role="Automation Test Lead" startdate="20161121000000000" state="New South Wales" summary="During this engagement I lead a small team to improve and extend a bespoke Java framework being used to test NBN’s data within its data warehouse. The framework tests the data as it goes from any of NBN’s source systems into and through the data warehouse to the end user business reports. Also whilst at this client I was able to aid a second team in building a Selenium based framework that freed up the need for Testing staff to be highly technical." tags="Nettezza Jira DevOps Jenkins Java Client" title="nbn NSW">
+<div clientcode="" contact="Maeve Mcneala" created="20191201235751910" creator="Ian" enddate="20170125000000000" modified="20200130043244051" modifier="Ian" project="AIM" responsibility="- Oversee junior automation staff on site
+- Architect a framework for testing data migration." role="Automation Test Lead" startdate="20161121000000000" state="New South Wales" summary="During this engagement I lead a small team to improve and extend a bespoke Java framework being used to test NBN’s data within its data warehouse. The framework tests the data as it goes from any of NBN’s source systems into and through the data warehouse to the end user business reports. Also whilst at this client I was able to aid a second team in building a Selenium based framework that freed up the need for Testing staff to be highly technical." tags="Nettezza Jira DevOps Jenkins Java Client" title="nbn NSW" year="2016">
 <pre></pre>
 </div>
-<div contact="Maeve Mcneala" created="20191106030105249" creator="Ian " dateformat="mmm YYYY" enddate="20180420000000000" enddatensw="20170101" enddatevic="20180401" modified="20191202035107134" modifier="Ian" project="A.I.M." responsibility=" - Oversee junior automation staff on site
+<div contact="Maeve Mcneala" created="20191106030105249" creator="Ian " dateformat="mmm YYYY" enddate="20180420000000000" enddatensw="20170101" enddatevic="20180401" modified="20200130044137250" modifier="Ian" project="A.I.M." responsibility=" - Oversee junior automation staff on site
  - Architect a framework for automating workday and SalesForce
- - Architect a framework for testing data migration." role="Automation Test Lead" startdate="20170130000000000" startdatensw="20161101" startdatevic="20170101" state="Victoria" summary="During this engagement I lead a small team to improve and extend a bespoke Java framework being used to test NBN’s data within its data warehouse. The framework tests the data as it goes from any of NBN’s source systems into and through the data warehouse to the end user business reports. Also whilst at this client I was able to aid a second team in building a Selenium based framework that freed up the need for Testing staff to be highly technical." tags="[[Sales Force]] Jira Jenkins DevOps SQL Git PoC WorkDay Nettezza Java Client" title="nbn VIC" tmap.id="79036345-e51b-403d-b697-f69b60eeb144">
+ - Architect a framework for testing data migration." role="Automation Test Lead" startdate="20170130000000000" startdatensw="20161101" startdatevic="20170101" state="Victoria" summary="During this engagement I lead a small team to improve and extend a bespoke Java framework being used to test NBN’s data within its data warehouse. The framework tests the data as it goes from any of NBN’s source systems into and through the data warehouse to the end user business reports. Also whilst at this client I was able to aid a second team in building a Selenium based framework that freed up the need for Testing staff to be highly technical." tags="[[Sales Force]] Jira Jenkins DevOps SQL Git PoC WorkDay Nettezza Java Client" title="nbn VIC" tmap.id="79036345-e51b-403d-b697-f69b60eeb144" year="2017">
 <pre></pre>
 </div>
 <div created="20191106035234350" creator="Ian " modified="20191203040924324" modifier="Ian" title="NeedWork" tmap.id="9819367a-6407-4135-8084-1caf0e5f2b03">
@@ -14146,7 +14158,7 @@ Use password `evva3ks`</pre>
 
 </pre>
 </div>
-<div created="20191106024235274" creator="Ian " modified="20200130042527032" modifier="Ian" startdate="20131028000000000" state="Victoria" tags="[[Silk Test]] ALM Client DetailsRequired" title="ORICA" tmap.id="d69c9395-67c5-464f-a0c1-2c483f25b59a">
+<div created="20191106024235274" creator="Ian " modified="20200130044103492" modifier="Ian" startdate="20131028000000000" state="Victoria" tags="[[Silk Test]] ALM Client DetailsRequired" title="ORICA" tmap.id="d69c9395-67c5-464f-a0c1-2c483f25b59a" year="2013">
 <pre></pre>
 </div>
 <div created="20191204233313335" creator="Ian" modified="20200115021023978" modifier="Ian" tags="" title="outlook.b64">
@@ -14276,7 +14288,7 @@ Then go to Outlook and import the rules file
 <div created="20191203005127136" creator="Ian" description="" modified="20191203014049956" modifier="Ian" tags="AndroidApp" title="PentiKeyboard" url="https://play.google.com/store/apps/details?id=de.software_lab.pentikeyboard&amp;hl=en_AU">
 <pre>http://www.software-lab.de/penti.html</pre>
 </div>
-<div created="20191106022923531" creator="Ian " dateformat="mmm YYYY" enddate="20181001" modified="20191202035105924" modifier="Ian" project="New Secure Client" role="Consultant" startdate="20180901" state="Victoria" summary="At Pepperstone I was responsible for implementing a JavaScript Selenium framework that will allow for the client to easily extend the test coverage of the scripts." tags="Git Gauge Selenium JavaScript Client" title="Pepperstone" tmap.id="a64eb877-2f02-4165-a655-902f6d75257e">
+<div created="20191106022923531" creator="Ian " dateformat="mmm YYYY" enddate="20181001" modified="20200130044209142" modifier="Ian" project="New Secure Client" role="Consultant" startdate="20180901" state="Victoria" summary="At Pepperstone I was responsible for implementing a JavaScript Selenium framework that will allow for the client to easily extend the test coverage of the scripts." tags="Git Gauge Selenium JavaScript Client" title="Pepperstone" tmap.id="a64eb877-2f02-4165-a655-902f6d75257e" year="2018">
 <pre></pre>
 </div>
 <div created="20191201100712913" creator="Ian" modified="20191210033752041" modifier="Ian" tags="Link tid/B1V-Q52aH" title="person DB">
@@ -14384,8 +14396,8 @@ Then go to Outlook and import the rules file
 &lt;/$list&gt;
 &lt;/table&gt;</pre>
 </div>
-<div created="20191105100818220" creator="Ian " dateformat="mmm YYYY" enddate="20181101" modified="20191202035104593" modifier="Ian" project="Build4" responsibility="- Build a reusable library of routines to be used with testing their CAD software.
-- Build base tests to demonstrate the use of the library." role="Consultant" startdate="20181001" state="Victoria" summary="Whilst at Pryda I was responsible for building a base Automation library in Ranorex." tags="C# Ranorex Client" title="Pryda" tmap.id="c70f8a2f-a76b-4904-bb97-fe448409141e">
+<div created="20191105100818220" creator="Ian " dateformat="mmm YYYY" enddate="20181101" modified="20200130044237949" modifier="Ian" project="Build4" responsibility="- Build a reusable library of routines to be used with testing their CAD software.
+- Build base tests to demonstrate the use of the library." role="Consultant" startdate="20181001" state="Victoria" summary="Whilst at Pryda I was responsible for building a base Automation library in Ranorex." tags="C# Ranorex Client" title="Pryda" tmap.id="c70f8a2f-a76b-4904-bb97-fe448409141e" year="2018">
 <pre></pre>
 </div>
 <div author="Terry Pratchett" created="20191213012726287" creator="Ian" description="" lastreaddate="" modified="20191213025455951" modifier="Ian" order="1" series="Discworld" tags="Discworld [[Ancient Civilisations]] Book" title="Pyramids">
@@ -14397,9 +14409,9 @@ Then go to Outlook and import the rules file
 <div created="20191106021730958" creator="Ian " modified="20191202030248904" modifier="Ian" tags="State" title="Queensland" tmap.id="c6b1336c-05bd-4dec-a279-e0ee0195a5e6">
 <pre></pre>
 </div>
-<div created="20191106020323048" creator="Ian " dateformat="mmm YYYY" enddate="20160101" modified="20191202035105471" modifier="Ian" responsibility="- Maintain and increase capability of the Ranorex C# automation framework
+<div created="20191106020323048" creator="Ian " dateformat="mmm YYYY" enddate="20160101" modified="20200130043526176" modifier="Ian" responsibility="- Maintain and increase capability of the Ranorex C# automation framework
 - Aid in the continued improvement of the Java-Selenium framework
-- Aid integration of the C# framework back into the Java framework" role="Senior Technical Test Analyst" startdate="20151201" state="Queensland" summary="Whilst on placement with this client I was required to create, maintain and troubleshoot an automation framework written in C# using Ranorex and Selenium. I also aide in the maintenance of an automation framework written in Java. I worked closely with the lead automation developer to aid in merging the two frameworks together to decrease the amount of maintenance effort." tags="MSDynamics DevOps Git C# Java Selenium Ranorex Client" title="RACQ" tmap.id="bf44c5c8-0f61-43fd-a44f-5baa5bfd0553">
+- Aid integration of the C# framework back into the Java framework" role="Senior Technical Test Analyst" startdate="20151201" state="Queensland" summary="Whilst on placement with this client I was required to create, maintain and troubleshoot an automation framework written in C# using Ranorex and Selenium. I also aide in the maintenance of an automation framework written in Java. I worked closely with the lead automation developer to aid in merging the two frameworks together to decrease the amount of maintenance effort." tags="MSDynamics DevOps Git C# Java Selenium Ranorex Client" title="RACQ" tmap.id="bf44c5c8-0f61-43fd-a44f-5baa5bfd0553" year="2015">
 <pre></pre>
 </div>
 <div author="Terry Pratchett" created="20191211221645513" creator="Ian" modified="20191213025234184" modifier="Ian" order="6" series="Discworld" tags="Book [[Industrial Revolution]] Discworld" title="Raising Steam">
@@ -14483,12 +14495,12 @@ Then go to Outlook and import the rules file
 <div author="Raymond E. Feist" created="20191214080655790" creator="Ian" description="" lastreaddate="" modified="20191214080727213" modifier="Ian" order="4" series="Riftwar" tags="Book" title="Silverthorn">
 <pre></pre>
 </div>
-<div created="20191106024619930" creator="Ian " dateformat="mmm YYYY" enddate="20151001" modified="20191203213244240" modifier="Ian" responsibility="- Mentor and train a Planit staff member in the framework that had been implemented at the client site.
+<div created="20191106024619930" creator="Ian " dateformat="mmm YYYY" enddate="20151001" modified="20200130043311278" modifier="Ian" responsibility="- Mentor and train a Planit staff member in the framework that had been implemented at the client site.
 - Create and maintain the Automation framework used to test the Border Control application suite.
 - Build and maintain Quality Centre reporting workbook to aid in the reporting of testing progress to management.
 - Produce a Performance Test plan.
 - Perform Performance testing against the Border control application suite.
-- Convert/create automation scripts using the created UFT framework." role="Senior Technical Test Analyst" startdate="20150401" state="New South Wales" summary="During my placement at SITA I headed the implementation of a UFT Automation framework to aid in the timely testing of SITA’s Boarder control Software. The technologies involved Web based applications as well as Message queue based applications. I also assisted in the performance testing of the border control system. The Framework and accompanying scripts aided the company in their move to becoming more Agile based." tags="VBA VBScript Selenium Excel ALM UFT Client" title="SITA aero" tmap.id="a802ddcc-da31-43ed-a38b-edfead1588fa">
+- Convert/create automation scripts using the created UFT framework." role="Senior Technical Test Analyst" startdate="20150401" state="New South Wales" summary="During my placement at SITA I headed the implementation of a UFT Automation framework to aid in the timely testing of SITA’s Boarder control Software. The technologies involved Web based applications as well as Message queue based applications. I also assisted in the performance testing of the border control system. The Framework and accompanying scripts aided the company in their move to becoming more Agile based." tags="VBA VBScript Selenium Excel ALM UFT Client" title="SITA aero" tmap.id="a802ddcc-da31-43ed-a38b-edfead1588fa" year="2015">
 <pre></pre>
 </div>
 <div created="20191114210749719" creator="Ian " modified="20191202032617229" modifier="Ian" tags="Comms" title="Slack" tmap.id="935693f9-5d7a-4f72-ae04-6792ab88e9df">
@@ -14568,10 +14580,10 @@ Then go to Outlook and import the rules file
 <div created="20191106092625133" creator="Ian " modified="20191106092646662" modifier="Ian " tags="Plants succulents" title="succulents" tmap.id="8ea94936-3909-4a2c-b118-78fabee587a3">
 <pre>&lt;&lt;list-links &quot;[tag[succulents]!tag[Plants]sort[title]]&quot;&gt;&gt;</pre>
 </div>
-<div created="20191106031219287" creator="Ian " enddate="20150414000000000" modified="20200130042236550" modifier="Ian" startdate="20150324000000000" state="New South Wales" tags="[[Disaster Recovery]] Client DetailsRequired" title="Sydney International Airport" tmap.id="ac9eb0d7-28f3-424c-86b1-50f451875d73">
+<div created="20191106031219287" creator="Ian " enddate="20150414000000000" modified="20200130043337558" modifier="Ian" startdate="20150324000000000" state="New South Wales" tags="[[Disaster Recovery]] Client DetailsRequired" title="Sydney International Airport" tmap.id="ac9eb0d7-28f3-424c-86b1-50f451875d73" year="2015">
 <pre></pre>
 </div>
-<div created="20191106021648086" creator="Ian " enddate="20120803000000000" modified="20200130042129991" modifier="Ian" startdate="20120621000000000" state="New South Wales" tags="DetailsRequired VBA Excel Client" title="Sydney Water" tmap.id="3f558799-468e-4c08-bc73-f3e6b7c7781c">
+<div created="20191106021648086" creator="Ian " enddate="20120803000000000" modified="20200130043357014" modifier="Ian" startdate="20120621000000000" state="New South Wales" tags="DetailsRequired VBA Excel Client" title="Sydney Water" tmap.id="3f558799-468e-4c08-bc73-f3e6b7c7781c" year="2012">
 <pre></pre>
 </div>
 <div created="20200120215004516" creator="Ian" modified="20200120215033114" modifier="Ian" tags="Current" title="Tag Keeper">
@@ -14857,9 +14869,9 @@ Decode [ext[here|https://www.base64decode.org/]] and then put it in the field
 <div created="20191203005440592" creator="Ian" description="" modified="20191203014146210" modifier="Ian" tags="AndroidApp" title="tramTRACKER" url="https://play.google.com/store/apps/details?id=com.yarratrams.tramtracker&amp;hl=en_AU">
 <pre></pre>
 </div>
-<div created="20191105101408855" creator="Ian " dateformat="mmm YYYY" enddate="20191014" modified="20191203213107552" modifier="Ian" project="Varied" responsibility="- Maintain and extend The Roadside Devices Emulation application
+<div created="20191105101408855" creator="Ian " dateformat="mmm YYYY" enddate="20191014" modified="20200130044305218" modifier="Ian" project="Varied" responsibility="- Maintain and extend The Roadside Devices Emulation application
 - PoC of UFT automation of the Control software for road operations.
-- Maintain existing Groovy based automation for testing mobile applications." role="Consultant" startdate="20190314" state="Victoria" summary="Whilst at Transurban I was responsible for maintenance of existing UFT automation frameworks and also the maintenance of existing simulation software. I was also required to perform PoCs using UFT against new applications." tags="VBA VBScript Java Go DevOps Jenkins SQL PHP Git ALM Selenium Appium Groovy Excel UFT Client" title="Transurban" tmap.id="6fc78e11-1524-4416-b893-d22a757d1c1a">
+- Maintain existing Groovy based automation for testing mobile applications." role="Consultant" startdate="20190314" state="Victoria" summary="Whilst at Transurban I was responsible for maintenance of existing UFT automation frameworks and also the maintenance of existing simulation software. I was also required to perform PoCs using UFT against new applications." tags="VBA VBScript Java Go DevOps Jenkins SQL PHP Git ALM Selenium Appium Groovy Excel UFT Client" title="Transurban" tmap.id="6fc78e11-1524-4416-b893-d22a757d1c1a" year="2019">
 <pre></pre>
 </div>
 <div created="20191203005509080" creator="Ian" description="" modified="20191203014156906" modifier="Ian" tags="AndroidApp" title="TripView" url="https://play.google.com/store/apps/details?id=com.grofsoft.tripview&amp;hl=en_AU">
