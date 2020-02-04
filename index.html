@@ -511,6 +511,8 @@ Error message and password prompt
 
 <li>Doug Engelbart</li>
 
+<li>DoupleClickCapsLock.ahk</li>
+
 <li>DuckDuckGo Privacy Browser</li>
 
 <li>editAApp</li>
@@ -11236,7 +11238,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20200204002655600" creator="Ian" list="LandingPage" modified="20200204002756505" modifier="Ian" title="$:/StoryList">
+<div created="20200204043303609" creator="Ian" list="LandingPage" modified="20200204043908556" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200120220922152" creator="Ian" modified="20200121034339168" modifier="Ian" title="$:/temp/BookDBeditBook">
@@ -11829,8 +11831,15 @@ also set up gmail sending with server - smtp.gmail.com port - 465 and SSL.  use 
 " modified="20191216211007449" modifier="Ian" tags="PortableApps" title="Calibre" url="https://portableapps.com/apps/office/calibre-portable">
 <pre></pre>
 </div>
-<div created="20200204002703351" creator="Ian" modified="20200204002803104" modifier="Ian" tags="Info Link Planit" title="Caps lock setup">
-<pre>[ext[https://www.techrepublic.com/article/how-to-remap-the-caps-lock-key-and-avoid-future-frustration/]]</pre>
+<div created="20200204002703351" creator="Ian" modified="20200204043902944" modifier="Ian" tags="Info Link Planit" title="Caps lock setup">
+<pre>Download [ext[autohotkey|https://www.autohotkey.com]]
+
+compile [[this script|DoupleClickCapsLock.ahk]]
+
+run `shell:start`
+
+copy script executable into the startup directory
+</pre>
 </div>
 <div author="Terry Pratchett" created="20191211221407759" creator="Ian" modified="20191213025100112" modifier="Ian" order="6" series="Discworld" tags="Book Witches Discworld" title="Carpe Jugulum">
 <pre></pre>
@@ -11977,6 +11986,21 @@ Begin building out Automation scripts to allow for others to extend the coverage
 </div>
 <div created="20191129040551308" creator="Ian" modified="20191129040717098" modifier="Ian" tags="Link Keyboard" title="Doug Engelbart">
 <pre>http://labs.teague.com/?p=1451</pre>
+</div>
+<div created="20200204043637993" creator="Ian" modified="20200204043734071" modifier="Ian" title="DoupleClickCapsLock.ahk">
+<pre>```
+*CapsLock:: ; Fire the hotkey even if extra modifiers are being held down. 
+If (A_ThisHotkey == A_PriorHotkey &amp;&amp; A_TimeSincePriorHotkey &lt; 300)
+{
+	If GetKeyState(&quot;CapsLock&quot;, &quot;T&quot;) 
+   		SetCapsLockState, off
+	else
+   		SetCapsLockState, on
+}
+Return
+```
+
+</pre>
 </div>
 <div created="20191203004905670" creator="Ian" description="Privacy browser" modified="20191203014028555" modifier="Ian" tags="AndroidApp" title="DuckDuckGo Privacy Browser" url="https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&amp;hl=en_AU">
 <pre></pre>
