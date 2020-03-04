@@ -729,6 +729,8 @@ Error message and password prompt
 
 <li>outlook.b64</li>
 
+<li>OutlookMacro</li>
+
 <li>OutlookRules</li>
 
 <li>Owl</li>
@@ -11267,7 +11269,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20200227043130117" creator="Ian" list="DHHS LandingPage" modified="20200227205156200" modifier="Ian" title="$:/StoryList">
+<div created="20200304205700436" creator="Ian" list="OutlookRules [[Environment Setup]] Work LandingPage" modified="20200304214047656" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200120220922152" creator="Ian" modified="20200121034339168" modifier="Ian" title="$:/temp/BookDBeditBook">
@@ -11318,11 +11320,11 @@ wjam</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1920&quot;
+            &quot;text&quot;: &quot;1280&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
-            &quot;text&quot;: &quot;1200&quot;
+            &quot;text&quot;: &quot;720&quot;
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
@@ -16308,8 +16310,34 @@ AGUAcgBpAGMAAAAAAAGAQgEAAAAAAAAAAAAAAAAAAFVVVVWxaOVAAAAAAA==
 
 </pre>
 </div>
-<div created="20191108022621398" creator="Ian " modified="20191204233450092" modifier="Ian" title="OutlookRules" tmap.id="36d20151-337d-47af-a484-558d15387161" type="text/vnd.tiddlywiki">
-<pre>copy the text from [[outlook.b64]] as a file `outlook.b64` then execute
+<div created="20200304214055483" creator="Ian" modified="20200304214110762" modifier="Ian" title="OutlookMacro">
+<pre>```
+Sub setupFolders()
+    Dim myNameSpace As Outlook.NameSpace
+    Dim myFolder As Outlook.Folder
+    Dim myNewFolder As Outlook.Folder
+ 
+    Set myNameSpace = Application.GetNamespace(&quot;MAPI&quot;)
+    Set myFolder = myNameSpace.GetDefaultFolder(olFolderInbox)
+    Set myNewFolder = myFolder.Folders.Add(&quot;00. Personal&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;01.Direct&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;02. et al&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;03. CCed&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;04. Meetings&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;05. Generic&quot;)
+    Set myNewFolder = myFolder.Folders.Add(&quot;06. Messages&quot;)
+End Sub
+```</pre>
+</div>
+<div created="20191108022621398" creator="Ian " modified="20200304214218156" modifier="Ian" title="OutlookRules" tmap.id="36d20151-337d-47af-a484-558d15387161" type="text/vnd.tiddlywiki">
+<pre>In Outlook 
+
+* create a macro 
+* copy [[this|OutlookMacro]] 
+* run it
+* then add the rules
+
+copy the text from [[outlook.b64]] as a file `outlook.b64` then execute
 
 ```
 certutil -decode outlook.b64 olr.rwz
