@@ -1,6 +1,6 @@
 # wiki
 
-**Must be run in Chrome**
+__Must be run in Chrome__
 
 - Set Github saver in settings
 
