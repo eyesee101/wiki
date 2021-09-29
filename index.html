@@ -621,6 +621,10 @@ Error message and password prompt
 
 <li>Kabbalah for Beginners</li>
 
+<li>Keep alive setup</li>
+
+<li>KeepAlive.ahk</li>
+
 <li>KeePass</li>
 
 <li>Keyboards</li>
@@ -12462,7 +12466,7 @@ wjam</pre>
 <div created="20191126032920311" creator="I" modified="20191126032921062" modifier="Ia" title="$:/status/UserName">
 <pre>Ian</pre>
 </div>
-<div created="20210929025510108" creator="Ian" list="LandingPage" modified="20210929034550369" modifier="Ian" title="$:/StoryList">
+<div created="20210929025510108" creator="Ian" list="KeepAlive.ahk [[Keep alive setup]] [[Caps lock setup]] [[Environment Setup]] Work LandingPage" modified="20210929035016199" modifier="Ian" title="$:/StoryList">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.23">
@@ -17106,6 +17110,44 @@ Cheet Sheet
 <div author="Michael Laitman" created="20191214081217437" creator="Ian" description="" lastreaddate="" modified="20191214081301114" modifier="Ian" order="" series="Kabbalah" tags="Book" title="Kabbalah for Beginners">
 <pre></pre>
 </div>
+<div created="20210929034856243" creator="Ian" modified="20210929034934599" modifier="Ian" tags="Info Link Planit" title="Keep alive setup">
+<pre>Download [ext[autohotkey|https://www.autohotkey.com]]
+
+compile [[this script|KeepAlive.ahk]] [ext[using this method|https://www.autohotkey.com/docs/Scripts.htm#ahk2exe]]
+
+
+run `shell:startup`
+
+copy script executable into the startup directory
+</pre>
+</div>
+<div created="20210929034952778" creator="Ian" modified="20210929035200565" modifier="Ian" title="KeepAlive.ahk">
+<pre>```
+;--- SETTINGS -----------------------------------------------------------------
+distance_x_px := 0
+check_interval_secs := 60 ; 1 minute
+minimum_idle_secs := 120 ; 2 minutes
+
+;--- MAIN LOOP ----------------------------------------------------------------
+; If the user has been idle for a certain time this script moves
+; the mouse pointer left and right by distance_x_px in regular intervals
+;
+movement_x := distance_x_px
+check_interval_millis := check_interval_secs * 1000
+minimum_idle_millis := minimum_idle_secs * 1000
+
+Loop {
+    Sleep, %check_interval_millis%
+    if (A_TimeIdle &gt; minimum_idle_millis) {
+        movement_x := -1 * movement_x
+        MouseMove, %movement_x%, 0, 0, R
+    }
+}
+
+```
+
+Also found [ext[here|https://github.com/eyesee101/ahktools/blob/master/ka.ahk]]</pre>
+</div>
 <div created="20210922224217479" creator="Ian" modified="20210922234047725" modifier="Ian" tags="" title="KeePass" tmap.id="36d20151-337d-47af-a484-558d15387161" type="text/vnd.tiddlywiki">
 <pre>
 * Download [ext[KeePass|https://keepass.info/]] 
@@ -18468,7 +18510,7 @@ Decode [ext[here|https://www.base64decode.org/]] and then put it in the field
 
 &lt;/$list&gt;</pre>
 </div>
-<div created="20191105100658042" creator="Ian " modified="20191216223842963" modifier="Ian" tags="Head Link Work" title="Work" tmap.edges="{&quot;eaa38bd0-af33-40ba-a77f-fca6500a8b69&quot;:{&quot;to&quot;:&quot;2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0cf15d65-abe9-47a2-928b-d6c2e4626f38&quot;:{&quot;to&quot;:&quot;7cf0b834-3bdd-4c70-ba69-69d229c32884&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;1820a0a2-ea01-405b-9732-08572a1edf31&quot;:{&quot;to&quot;:&quot;5c9f2737-f4c3-450b-9f20-f4d0901cfd22&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;ee213f61-b257-43eb-894a-40efb239f7cf&quot;:{&quot;to&quot;:&quot;17397e88-24aa-4039-bb5c-b41bf0c0ab57&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="0a5bca4b-59a1-479f-8773-e46eb1f0229f">
+<div created="20191105100658042" creator="Ian " modified="20210929034755890" modifier="Ian" tags="Head Link" title="Work" tmap.edges="{&quot;eaa38bd0-af33-40ba-a77f-fca6500a8b69&quot;:{&quot;to&quot;:&quot;2339ed93-c6ba-4a8c-8a2c-be5bf293cc9d&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;0cf15d65-abe9-47a2-928b-d6c2e4626f38&quot;:{&quot;to&quot;:&quot;7cf0b834-3bdd-4c70-ba69-69d229c32884&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;1820a0a2-ea01-405b-9732-08572a1edf31&quot;:{&quot;to&quot;:&quot;5c9f2737-f4c3-450b-9f20-f4d0901cfd22&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;},&quot;ee213f61-b257-43eb-894a-40efb239f7cf&quot;:{&quot;to&quot;:&quot;17397e88-24aa-4039-bb5c-b41bf0c0ab57&quot;,&quot;type&quot;:&quot;tmap:unknown&quot;}}" tmap.id="0a5bca4b-59a1-479f-8773-e46eb1f0229f">
 <pre>''GENERAL''
 &lt;&lt;list-links &quot;[tag[Client]tag[Link]sort[title]]&quot;&gt;&gt;
 
