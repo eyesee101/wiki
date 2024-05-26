@@ -4,7 +4,7 @@ __Must be run in Chrome__
 
 - Set Github saver in settings
 
-Cartridge%Murky[Aware#vending^6
+Q2FydHJpZGdlJU11cmt5W0F3YXJlI3ZlbmRpbmdeNg==
 
 TWAccess Z2hwX1FQcW1JVms5bUUyWUlORFRKdnlKU0QzbVhTZWI2WjB5eWFHNw==
 
