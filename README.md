@@ -4,7 +4,7 @@ __Must be run in Chrome__
 
 - Set Github saver in settings
 
-Q2FydHJpZGdlJU11cmt5W0F3YXJlI3ZlbmRpbmdeNg==
+ZXllc2VlMTAxOmdtYWlsOkNhcnRyaWRnZSVNdXJreVtBd2FyZSN2ZW5kaW5nXjY=
 
 TWAccess Z2hwX1FQcW1JVms5bUUyWUlORFRKdnlKU0QzbVhTZWI2WjB5eWFHNw==
 
